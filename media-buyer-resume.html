@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Buyer — Crypto / Facebook Ads — @FXSCXI</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Special+Elite&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/nicholasgasior/gfonts@latest/fonts/SeoulNamsanCondensed/SeoulNamsanCondensed.css" rel="stylesheet" onerror="">
+<style>@font-face{font-family:'SeoulNamsan CL';src:url('https://cdn.jsdelivr.net/gh/nicholasgasior/gfonts@latest/fonts/SeoulNamsanCondensed/SeoulNamsanCondensedLight.woff2') format('woff2');font-weight:300;font-display:swap;}@font-face{font-family:'SeoulNamsan CL';src:url('https://cdn.jsdelivr.net/gh/nicholasgasior/gfonts@latest/fonts/SeoulNamsanCondensed/SeoulNamsanCondensedBold.woff2') format('woff2');font-weight:700;font-display:swap;}</style>
+<style>
+:root{
+  --black:#000; --dark:#080808; --card:#0d0d0d; --card2:#111;
+  --white:#f0f0f0; --grey:#555; --lgrey:#888;
+  --border:rgba(255,255,255,0.07); --border2:rgba(255,255,255,0.12);
+  --accent:#c8ff00; --accent2:rgba(200,255,0,0.15); --accent3:rgba(200,255,0,0.06);
+  --glow:0 0 24px rgba(200,255,0,0.32), 0 0 60px rgba(200,255,0,0.1);
+  --neon-text:0 0 7px rgba(200,255,0,0.56), 0 0 20px rgba(200,255,0,0.28), 0 0 40px rgba(200,255,0,0.14);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Share Tech Mono',monospace;background:var(--black);color:var(--white);overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);
+  background-size:69px 69px;pointer-events:none;}
+
+.scroll-line{position:fixed;top:0;left:0;height:2px;z-index:1000;background:var(--accent);box-shadow:var(--glow);width:0%;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;padding:0 48px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(0,0,0,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:38px;height:38px;border:1px solid var(--accent);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;color:var(--accent);
+  font-family:'Cinzel',serif;font-weight:600;font-size:15px;
+  box-shadow:0 0 16px rgba(200,255,0,0.25), inset 0 0 12px rgba(200,255,0,0.05);}
+.nav-logo-text{font-family:'SeoulNamsan CL','Special Elite',cursive;font-size:13px;font-weight:700;color:var(--white);letter-spacing:0.1em;}
+.nav-right{display:flex;align-items:center;gap:28px;}
+.nav-links{display:flex;align-items:center;gap:34px;}
+.nav-links a{font-size:12px;color:var(--lgrey);text-decoration:none;letter-spacing:0.06em;font-family:'Share Tech Mono',monospace;transition:color .2s;}
+.nav-links a:hover{color:var(--white);}
+.nav-cta{background:transparent!important;border:1px solid var(--border2)!important;color:var(--white)!important;
+  padding:8px 20px;border-radius:4px;font-size:12px!important;cursor:pointer;transition:all .2s!important;text-decoration:none;font-family:'Share Tech Mono',monospace;}
+.nav-cta:hover{border-color:var(--accent)!important;color:var(--accent)!important;}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .3s;}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-burger.open span:nth-child(2){opacity:0;}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;z-index:499;
+  background:rgba(0,0,0,0.97);backdrop-filter:blur(20px);padding:28px 24px;border-bottom:1px solid var(--border);flex-direction:column;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:0.06em;
+  color:var(--lgrey);text-decoration:none;padding:16px 0;border-bottom:1px solid var(--border);transition:color .2s;}
+.mobile-menu a:hover{color:var(--white);}
+.mobile-menu .m-cta{color:var(--accent)!important;border-bottom:none!important;margin-top:8px;}
+
+.hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 48px 80px;}
+.hero-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);
+  text-transform:uppercase;margin-bottom:26px;display:flex;align-items:center;gap:10px;}
+.hero-label::before{content:'';width:24px;height:1px;background:var(--accent);box-shadow:var(--glow);}
+.hero-title{font-family:'SeoulNamsan CL','Special Elite',cursive;font-size:clamp(52px,9vw,120px);font-weight:700;line-height:1.1;letter-spacing:-0.03em;margin-bottom:22px;}
+.hero-title .accent-hl{color:var(--accent);text-shadow:0 0 40px rgba(200,255,0,0.4);}
+.hero-role{font-family:'Share Tech Mono',monospace;font-size:clamp(18px,2.4vw,28px);font-weight:500;letter-spacing:-0.01em;margin-bottom:14px;color:var(--white);}
+.hero-role .sep{color:var(--accent);margin:0 12px;font-weight:400;}
+.hero-loc{font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:0.1em;color:var(--lgrey);margin-bottom:34px;}
+.hero-sub{font-size:16px;color:var(--lgrey);max-width:600px;line-height:1.7;margin-bottom:48px;}
+.hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+.btn-primary{background:var(--accent);color:#000;padding:14px 32px;border-radius:4px;font-weight:700;
+  font-size:13px;text-decoration:none;letter-spacing:0.04em;box-shadow:0 0 32px rgba(200,255,0,0.3);transition:all .2s;font-family:'Share Tech Mono',monospace;}
+.btn-primary:hover{box-shadow:0 0 52px rgba(200,255,0,0.5);transform:translateY(-2px);}
+.btn-secondary{color:var(--lgrey);font-size:13px;text-decoration:none;letter-spacing:0.04em;display:flex;align-items:center;gap:8px;transition:color .2s;font-family:'Share Tech Mono',monospace;}
+.btn-secondary:hover{color:var(--white);}
+.btn-secondary::after{content:'→';transition:transform .2s;}
+.btn-secondary:hover::after{transform:translateX(4px);}
+.hero-stats{position:absolute;bottom:60px;right:48px;display:flex;gap:48px;z-index:1;}
+.stat-item{text-align:right;}
+.stat-num{font-family:'Share Tech Mono',monospace;font-size:28px;font-weight:700;color:var(--white);line-height:1;}
+.stat-num span{color:var(--accent);text-shadow:0 0 8px rgba(200,255,0,0.5);}
+.stat-label{font-size:10px;color:var(--grey);letter-spacing:0.12em;text-transform:uppercase;margin-top:4px;}
+.hero-deco{position:absolute;top:50%;right:32px;transform:translateY(-50%);width:710px;height:710px;z-index:0;}
+#particleCanvas{display:block;}
+@media(max-width:900px){
+  .hero-deco{width:546px;height:546px;top:42%;left:50%;right:auto;transform:translate(-50%,-50%);opacity:0.5;}
+  #particleCanvas{width:546px!important;height:546px!important;}
+}
+@media(max-width:480px){
+  .hero-deco{width:440px;height:440px;opacity:0.42;}
+  #particleCanvas{width:440px!important;height:440px!important;}
+}
+
+section{position:relative;z-index:1;padding:100px 48px;}
+.section-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;border-bottom:1px solid var(--border);padding-bottom:24px;}
+.section-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:12px;text-shadow:0 0 8px rgba(200,255,0,0.21);}
+.section-title{font-family:'Share Tech Mono',monospace;font-size:clamp(28px,3.5vw,44px);font-weight:700;letter-spacing:-0.02em;line-height:1.1;}
+.section-count{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--grey);letter-spacing:0.1em;}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.rv.vis{opacity:1;transform:none;}
+.d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}.d4{transition-delay:.32s;}.d5{transition-delay:.4s;}
+
+.marquee-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;padding:18px 0;position:relative;z-index:1;}
+.marquee-track{display:flex;gap:0;animation:marquee-go 34s linear infinite;white-space:nowrap;}
+.marquee-item{display:inline-flex;align-items:center;gap:16px;padding:0 32px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.15em;color:var(--grey);text-transform:uppercase;}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+@keyframes marquee-go{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+.ai-section{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.ai-headline{font-family:'Share Tech Mono',monospace;font-size:clamp(28px,3vw,40px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:20px;}
+.ai-headline em{font-style:normal;color:var(--accent);text-shadow:var(--neon-text);}
+.ai-text{font-family:'Share Tech Mono',monospace;font-size:15px;color:var(--lgrey);line-height:1.75;margin-bottom:28px;}
+.ai-list{list-style:none;margin-bottom:36px;}
+.ai-list li{font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--white);padding:12px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:14px;line-height:1.5;}
+.ai-list li:last-child{border-bottom:none;}
+.ai-list li::before{content:'▸';color:var(--accent);font-family:'Share Tech Mono',monospace;flex-shrink:0;margin-top:2px;}
+.ai-right{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);}
+.ai-metric{background:var(--black);padding:28px 24px;}
+.ai-metric-val{font-family:'Share Tech Mono',monospace;font-size:32px;font-weight:700;color:var(--white);line-height:1;margin-bottom:6px;}
+.ai-metric-val span{color:var(--accent);}
+.ai-metric-label{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--grey);line-height:1.5;}
+
+#about{overflow:hidden;}
+#about .section-header,#about .ai-grid{position:relative;z-index:2;}
+.grid-bg{position:absolute;inset:0;z-index:0;display:grid;gap:2px;pointer-events:none;touch-action:pan-y;}
+.grid-cell{background:#101010;transition:background 1.4s ease, box-shadow 1.4s ease;}
+.grid-cell.active{background:var(--accent);box-shadow:0 0 10px rgba(200,255,0,0.4);transition:background 0s, box-shadow 0s;}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+.service-card{background:var(--black);padding:40px 36px;position:relative;overflow:hidden;transition:background .3s;}
+.service-card:hover{background:var(--card);}
+.service-card:hover .service-icon{box-shadow:var(--glow);border-color:var(--accent);}
+.service-num{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--grey);letter-spacing:0.15em;margin-bottom:28px;}
+.service-icon{width:44px;height:44px;border:1px solid var(--border2);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;transition:all .3s;font-size:20px;color:var(--accent);}
+.service-name{font-family:'Share Tech Mono',monospace;font-size:18px;font-weight:600;margin-bottom:12px;letter-spacing:-0.01em;}
+.service-desc{font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--lgrey);line-height:1.7;margin-bottom:18px;}
+.service-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.svc-tag{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:0.08em;color:var(--grey);border:1px solid var(--border);padding:4px 9px;border-radius:2px;}
+.service-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--accent);transition:width .4s ease;}
+.service-card:hover::after{width:100%;}
+@media(max-width:900px){
+  .service-card.rv.vis::after{width:100%;}
+  .service-card.rv.vis .service-icon{box-shadow:var(--glow);border-color:var(--accent);}
+  .service-card.rv.vis .service-num{color:var(--accent);}
+}
+
+.process-track{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+.pstep{padding:40px 28px 36px;border:1px solid var(--border);border-right:none;position:relative;z-index:1;background:var(--black);
+  opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease,background .25s;}
+.pstep:last-child{border-right:1px solid var(--border);}
+.pstep.visible{opacity:1;transform:translateY(0);}
+.pstep:hover{background:var(--card);}
+.pstep:hover .ps-dot{box-shadow:0 0 0 6px var(--accent2),var(--glow);}
+.pstep:hover .ps-num{color:var(--accent);}
+.ps-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-bottom:28px;box-shadow:0 0 0 3px var(--accent3),var(--glow);transition:box-shadow .3s;animation:dot-breathe 3s ease-in-out infinite;}
+.pstep:nth-child(2) .ps-dot{animation-delay:.5s;}.pstep:nth-child(3) .ps-dot{animation-delay:1s;}.pstep:nth-child(4) .ps-dot{animation-delay:1.5s;}
+@keyframes dot-breathe{0%,100%{box-shadow:0 0 0 3px var(--accent3),0 0 8px rgba(200,255,0,0.3);}50%{box-shadow:0 0 0 8px rgba(200,255,0,0.06),0 0 24px rgba(200,255,0,0.5);}}
+.ps-num{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--grey);letter-spacing:0.15em;margin-bottom:16px;transition:color .25s;}
+.ps-title{font-family:'Share Tech Mono',monospace;font-size:17px;font-weight:600;margin-bottom:10px;letter-spacing:-0.01em;line-height:1.2;}
+.ps-desc{font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--lgrey);line-height:1.65;margin-bottom:20px;}
+.ps-tag{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;border:1px solid var(--accent2);padding:4px 10px;border-radius:2px;display:inline-block;text-shadow:0 0 6px rgba(200,255,0,0.21);}
+
+/* GEO grid */
+.geo-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+.geo-cell{background:var(--black);padding:22px 16px;text-align:center;transition:all .25s;position:relative;}
+.geo-cell:hover{background:var(--card);}
+.geo-cell:hover .geo-code{color:var(--accent);}
+.geo-flag{font-size:28px;line-height:1;margin-bottom:10px;filter:drop-shadow(0 0 6px rgba(200,255,0,0.1));}
+.geo-code{font-family:'Share Tech Mono',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:0.1em;transition:color .2s;}
+.geo-tier{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--grey);letter-spacing:0.1em;margin-top:4px;}
+@media(max-width:900px){.geo-grid{grid-template-columns:repeat(4,1fr);}}
+@media(max-width:600px){.geo-grid{grid-template-columns:repeat(3,1fr);}}
+
+/* Conversion metric row */
+.metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+.mrow{background:var(--black);padding:32px 26px;}
+.mrow-flag{font-size:24px;margin-bottom:14px;line-height:1;}
+.mrow-val{font-family:'Share Tech Mono',monospace;font-size:32px;font-weight:700;color:var(--white);line-height:1;margin-bottom:6px;}
+.mrow-val span{color:var(--accent);text-shadow:0 0 10px rgba(200,255,0,0.4);}
+.mrow-lbl{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--grey);line-height:1.5;letter-spacing:0.08em;}
+@media(max-width:900px){.metrics-row{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.metrics-row{grid-template-columns:1fr;}}
+
+.cta-section{padding:120px 48px;text-align:center;position:relative;z-index:1;border-top:1px solid var(--border);}
+.cta-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:24px;}
+.cta-title{font-family:'Share Tech Mono',monospace;font-size:clamp(32px,5vw,64px);font-weight:700;letter-spacing:-0.03em;line-height:1.05;margin-bottom:20px;}
+.cta-title em{font-style:normal;color:var(--accent);text-shadow:var(--neon-text);}
+.cta-sub{font-family:'Share Tech Mono',monospace;font-size:15px;color:var(--lgrey);margin-bottom:48px;max-width:520px;margin-inline:auto;line-height:1.7;}
+.cta-tg{display:inline-flex;align-items:center;gap:14px;font-family:'Share Tech Mono',monospace;font-size:16px;color:var(--white);text-decoration:none;padding:18px 36px;border:1px solid var(--accent);border-radius:6px;background:var(--accent3);letter-spacing:0.06em;transition:all .2s;}
+.cta-tg:hover{background:var(--accent);color:#000;box-shadow:var(--glow);}
+
+footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.footer-logo{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--grey);letter-spacing:0.06em;}
+.footer-copy{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--grey);letter-spacing:0.05em;}
+
+@media(max-width:1100px){
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:900px){
+  nav{padding:0 20px;}.nav-links{display:none;}.nav-burger{display:flex;}
+  .nav-right{gap:16px;}
+  section{padding:70px 20px;}.hero{padding:100px 20px 80px;}.hero-stats{display:none;}
+  .services-grid{grid-template-columns:1fr;}
+  .ai-grid{grid-template-columns:1fr;gap:40px;}
+  .process-track{grid-template-columns:1fr 1fr;}
+  .pstep{border-right:1px solid var(--border)!important;}
+  footer{flex-direction:column;gap:16px;text-align:center;}
+  .section-header{flex-direction:column;align-items:flex-start;gap:8px;}
+  .cta-section{padding:80px 20px;}
+}
+@media(max-width:600px){
+  .process-track{grid-template-columns:1fr;}
+  .hero-title{font-size:clamp(44px,13vw,72px);}
+}
+
+@keyframes neon-flicker{
+  0%,100%{text-shadow:0 0 7px rgba(200,255,0,0.56),0 0 20px rgba(200,255,0,0.28),0 0 40px rgba(200,255,0,0.14);opacity:1;}
+  42%{text-shadow:0 0 3px rgba(200,255,0,0.28),0 0 10px rgba(200,255,0,0.14);opacity:0.88;}
+  43%{text-shadow:0 0 7px rgba(200,255,0,0.56),0 0 20px rgba(200,255,0,0.28),0 0 40px rgba(200,255,0,0.14);opacity:1;}
+  72%{text-shadow:0 0 5px rgba(200,255,0,0.42),0 0 14px rgba(200,255,0,0.21);opacity:0.94;}
+  73%{text-shadow:0 0 7px rgba(200,255,0,0.56),0 0 20px rgba(200,255,0,0.28),0 0 40px rgba(200,255,0,0.14);opacity:1;}
+}
+.hero-title .accent-hl{color:var(--accent);text-shadow:var(--neon-text);animation:neon-flicker 5s ease-in-out infinite;}
+.hero-label{text-shadow:0 0 10px rgba(200,255,0,0.21);}
+.hero-label::before{box-shadow:0 0 12px rgba(200,255,0,0.42),0 0 30px rgba(200,255,0,0.14);}
+.ai-headline em{animation:neon-flicker 6s ease-in-out infinite 1s;}
+.cta-title em{animation:neon-flicker 5.5s ease-in-out infinite 0.5s;}
+</style>
+</head>
+<body>
+
+<div class="scroll-line" id="scrollLine"></div>
+
+<nav>
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-mark">FX</div>
+    <span class="nav-logo-text">MEDIA BUYER</span>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#about">Опыт</a>
+      <a href="#skills">Навыки</a>
+      <a href="#approach">Подход</a>
+      <a href="#scale">Масштаб</a>
+      <a href="#geo">GEO</a>
+    </div>
+    <a href="https://t.me/FXSCXI" target="_blank" class="nav-cta">Контакт</a>
+  </div>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">Опыт</a>
+  <a href="#skills">Навыки</a>
+  <a href="#approach">Подход</a>
+  <a href="#scale">Масштаб</a>
+  <a href="#geo">GEO</a>
+  <a href="https://t.me/FXSCXI" target="_blank" class="m-cta">Написать в Telegram →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-label">Media Buyer × Crypto × Facebook Ads</div>
+  <h1 class="hero-title">
+    <span>Vadim <span class="accent-hl">M.</span></span>
+  </h1>
+  <div class="hero-role">Media Buyer <span class="sep">|</span> Crypto <span class="sep">|</span> FB</div>
+  <div class="hero-loc"><span style="color:var(--accent)">→</span> Tier 1–3 · Native · English GEO</div>
+  <p class="hero-sub">Разрабатываю стратегии запуска и масштабирования рекламных кампаний под ключевые GEO. Фокус на цифрах, точной настройке, чистой аналитике и стабильной прибыльности.</p>
+  <div class="hero-actions">
+    <a href="#skills" class="btn-primary">Смотреть навыки</a>
+    <a href="https://t.me/FXSCXI" target="_blank" class="btn-secondary">Написать в Telegram</a>
+  </div>
+  <div class="hero-deco" aria-hidden="true"><canvas id="particleCanvas" width="710" height="710"></canvas></div>
+  <div class="hero-stats">
+    <div class="stat-item"><div class="stat-num">$10K<span>+</span></div><div class="stat-label">Дневной бюджет</div></div>
+    <div class="stat-item"><div class="stat-num">50<span>%+</span></div><div class="stat-label">ROI</div></div>
+    <div class="stat-item"><div class="stat-num">20<span>+</span></div><div class="stat-label">GEO</div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>Facebook Ads</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Higgsfield AI</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>UX/UI Landing</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>AI Automation</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Keitaro</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Клоакинг</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Автозалив</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>CBO 1-5-2</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>ABO 1-10-1</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Lookalike</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Ads Library</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Google Trends</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Winners Set</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Unit Economics</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Facebook Ads</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Higgsfield AI</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>UX/UI Landing</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>AI Automation</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Keitaro</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Клоакинг</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Автозалив</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>CBO 1-5-2</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>ABO 1-10-1</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Lookalike</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Ads Library</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Google Trends</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Winners Set</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Unit Economics</span>
+  </div>
+</div>
+
+<!-- ABOUT / ОПЫТ -->
+<section id="about" class="ai-section">
+  <div class="grid-bg" id="aboutGrid" aria-hidden="true"></div>
+  <div class="section-header rv">
+    <div><div class="section-label">Кто я</div><h2 class="section-title">🧠 Опыт</h2></div>
+    <div class="section-count">01 — профиль</div>
+  </div>
+  <div class="ai-grid">
+    <div class="ai-left rv">
+      <h2 class="ai-headline">Байер, который<br>масштабирует <em>связки</em>,<br>а не отдельные крео</h2>
+      <p class="ai-text">Решения принимаются на основе KPI и юнит-экономики. Чёткое разделение теста и масштаба. Каждая гипотеза проходит цикл: тест → валидация → масштаб.</p>
+      <ul class="ai-list">
+        <li>🚀 Запуск и оптимизация рекламных кампаний под Tier 1–3</li>
+        <li>💰 Масштабирование с дневными бюджетами $10K+ и ROI 50%+</li>
+        <li>🎨 Генерация контента (фото/видео) для креативов через Higgsfield</li>
+        <li>🖥 UX/UI ленды под конкретный оффер и GEO</li>
+        <li>🤖 Техничка и автоматизация процессов через AI</li>
+        <li>📊 Трекеры Keitaro, автозалив, клоакинг, тест связок ABO/CBO</li>
+      </ul>
+      <a href="#skills" class="btn-primary">Мои навыки</a>
+    </div>
+    <div class="ai-right rv d2">
+      <div class="ai-metric"><div class="ai-metric-val">FB</div><div class="ai-metric-label">Facebook Ads<br>Ads Library</div></div>
+      <div class="ai-metric"><div class="ai-metric-val">KT</div><div class="ai-metric-label">Keitaro<br>Трекинг</div></div>
+      <div class="ai-metric"><div class="ai-metric-val">$10K</div><div class="ai-metric-label">Daily budget<br>ROI 50%+</div></div>
+      <div class="ai-metric"><div class="ai-metric-val">B2</div><div class="ai-metric-label">English<br>Upper Intermediate</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header rv">
+    <div><div class="section-label">Что я делаю</div><h2 class="section-title">Навыки</h2></div>
+    <div class="section-count">09 — направлений</div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card rv"><div class="service-num">01</div><div class="service-icon">🚀</div><div class="service-name">Запуск кампаний</div><p class="service-desc">Разработка стратегий запуска под ключевые GEO. Оптимизация под KPI и юнит-экономику с первого дня.</p><div class="service-tags"><span class="svc-tag">Facebook</span><span class="svc-tag">Tier 1-3</span><span class="svc-tag">Native</span></div></div>
+    <div class="service-card rv d1"><div class="service-num">02</div><div class="service-icon">🧪</div><div class="service-name">Тест связок</div><p class="service-desc">Разработка и тестирование связок Creative / Audience / Landing. Гипотеза → тест → валидация → масштаб.</p><div class="service-tags"><span class="svc-tag">Creative</span><span class="svc-tag">Audience</span><span class="svc-tag">Landing</span></div></div>
+    <div class="service-card rv d2"><div class="service-num">03</div><div class="service-icon">📊</div><div class="service-name">Трекинг и аналитика</div><p class="service-desc">Keitaro, чистая аналитика по всей воронке, отслеживание CPL/CPM/ROI в реальном времени.</p><div class="service-tags"><span class="svc-tag">Keitaro</span><span class="svc-tag">KPI</span><span class="svc-tag">Unit-эк.</span></div></div>
+    <div class="service-card rv"><div class="service-num">04</div><div class="service-icon">🎨</div><div class="service-name">AI-креативы</div><p class="service-desc">Генерация контента (фото и видео) для креативов через Higgsfield. Свой пайплайн под быстрый тест визуалов под GEO и оффер.</p><div class="service-tags"><span class="svc-tag">Higgsfield</span><span class="svc-tag">Photo</span><span class="svc-tag">Video</span></div></div>
+    <div class="service-card rv d1"><div class="service-num">05</div><div class="service-icon">🤖</div><div class="service-name">Автоматизация через AI</div><p class="service-desc">Техничка и автоматизация процессов через AI. Автозалив, автоправила, управление бюджетами на десятках аккаунтов без ручного труда.</p><div class="service-tags"><span class="svc-tag">AI</span><span class="svc-tag">Auto-rules</span><span class="svc-tag">SOFT</span></div></div>
+    <div class="service-card rv d2"><div class="service-num">06</div><div class="service-icon">🖥</div><div class="service-name">UX/UI ленды</div><p class="service-desc">Разработка лендингов под оффер — от UX-логики и структуры до финального UI. Ленд заточен под конкретную связку и GEO.</p><div class="service-tags"><span class="svc-tag">UX</span><span class="svc-tag">UI</span><span class="svc-tag">Landing</span></div></div>
+    <div class="service-card rv"><div class="service-num">07</div><div class="service-icon">🛡</div><div class="service-name">Клоакинг</div><p class="service-desc">Обход модерации, чистая работа в серых вертикалях, стабильный залив без банов.</p><div class="service-tags"><span class="svc-tag">Cloaking</span><span class="svc-tag">Anti-ban</span><span class="svc-tag">Crypto</span></div></div>
+    <div class="service-card rv d1"><div class="service-num">08</div><div class="service-icon">🔍</div><div class="service-name">Research</div><p class="service-desc">Google Trends, Facebook Ads Library, локальные форумы и медиа — валидация оффера под GEO.</p><div class="service-tags"><span class="svc-tag">Trends</span><span class="svc-tag">Ads Lib</span><span class="svc-tag">Local</span></div></div>
+    <div class="service-card rv d2"><div class="service-num">09</div><div class="service-icon">⚙</div><div class="service-name">Техничка</div><p class="service-desc">Настройка технической инфраструктуры под залив: домены, трекеры, антидетект, интеграции — всё под ключ без чужой помощи.</p><div class="service-tags"><span class="svc-tag">Setup</span><span class="svc-tag">Anti-det.</span><span class="svc-tag">Integr.</span></div></div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach" class="ai-section">
+  <div class="section-header rv">
+    <div><div class="section-label">Как я работаю</div><h2 class="section-title">⚙ Подход</h2></div>
+    <div class="section-count">Гипотеза → Масштаб</div>
+  </div>
+  <div class="process-track" id="processTrack">
+    <div class="pstep">
+      <div class="ps-dot"></div><div class="ps-num">01 — RESEARCH</div>
+      <div class="ps-title">Исследование</div>
+      <p class="ps-desc">Анализ спроса и болей аудитории через Google Trends, изучение поведенческих паттернов по GEO, разбор конкурентов в Facebook Ads Library.</p>
+      <span class="ps-tag">Trends · Ads Library</span>
+    </div>
+    <div class="pstep">
+      <div class="ps-dot"></div><div class="ps-num">02 — TEST</div>
+      <div class="ps-title">Тестирование</div>
+      <p class="ps-desc">Структура ABO 1–10–1. Проверка гипотез по связкам Creative / Audience / Landing. Валидация оффера через локальные форумы и сообщества.</p>
+      <span class="ps-tag">ABO 1–10–1</span>
+    </div>
+    <div class="pstep">
+      <div class="ps-dot"></div><div class="ps-num">03 — VALIDATE</div>
+      <div class="ps-title">Валидация</div>
+      <p class="ps-desc">Отбор рабочих связок по KPI и юнит-экономике. Формирование Winners Set — пула проверенных креативов и аудиторий.</p>
+      <span class="ps-tag">Winners Set</span>
+    </div>
+    <div class="pstep">
+      <div class="ps-dot"></div><div class="ps-num">04 — SCALE</div>
+      <div class="ps-title">Масштабирование</div>
+      <p class="ps-desc">CBO 1–5–2 на подтверждённых связках. Масштабируется связка, а не отдельный креатив. Чёткое разделение теста и масштаба.</p>
+      <span class="ps-tag">CBO 1–5–2</span>
+    </div>
+  </div>
+</section>
+
+<!-- SCALING -->
+<section id="scale">
+  <div class="section-header rv">
+    <div><div class="section-label">Как я масштабирую</div><h2 class="section-title">📈 Масштабирование</h2></div>
+    <div class="section-count">03 — вектора</div>
+  </div>
+  <div class="services-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="service-card rv"><div class="service-num">01 · ГОРИЗОНТАЛЬ</div><div class="service-icon">📊</div><div class="service-name">Горизонтальное</div><p class="service-desc">Дублирование рабочих кампаний и адсетов. Запуск на новых аккаунтах и Fan Pages. Масштабирование через бюджеты и аудитории.</p><div class="service-tags"><span class="svc-tag">Duplicate</span><span class="svc-tag">New accs</span><span class="svc-tag">Fan Pages</span></div></div>
+    <div class="service-card rv d1"><div class="service-num">02 · ВЕРТИКАЛЬ</div><div class="service-icon">📈</div><div class="service-name">Вертикальное</div><p class="service-desc">Постепенный рост бюджета +20–30% каждые 24 часа. Аккуратное давление на рабочую связку без потери качества трафика.</p><div class="service-tags"><span class="svc-tag">+20-30%</span><span class="svc-tag">24h step</span></div></div>
+    <div class="service-card rv d2"><div class="service-num">03 · АУДИТОРИИ</div><div class="service-icon">🎯</div><div class="service-name">По аудиториям</div><p class="service-desc">Расширение ЦА: узкие интересы → Broad. Lookalike 1% → 3–5%. Поиск свежих пулов внутри рабочей связки.</p><div class="service-tags"><span class="svc-tag">Broad</span><span class="svc-tag">LAL 1-5%</span><span class="svc-tag">Interests</span></div></div>
+  </div>
+</section>
+
+<!-- GEO -->
+<section id="geo" class="ai-section">
+  <div class="section-header rv">
+    <div><div class="section-label">Где я лью</div><h2 class="section-title">🌍 GEO</h2></div>
+    <div class="section-count">Tier 1 · 2 · 3</div>
+  </div>
+  <div class="geo-grid">
+    <div class="geo-cell"><div class="geo-flag">🇩🇪</div><div class="geo-code">DE</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇬🇧</div><div class="geo-code">UK</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇨🇦</div><div class="geo-code">CA</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇦🇺</div><div class="geo-code">AU</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇨🇭</div><div class="geo-code">CH</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇳🇱</div><div class="geo-code">NL</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇧🇪</div><div class="geo-code">BE</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇮🇪</div><div class="geo-code">IE</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇩🇰</div><div class="geo-code">DK</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇸🇪</div><div class="geo-code">SE</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇳🇴</div><div class="geo-code">NO</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇫🇮</div><div class="geo-code">FI</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇮🇸</div><div class="geo-code">IS</div><div class="geo-tier">T1</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇪🇸</div><div class="geo-code">ES</div><div class="geo-tier">T2</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇮🇹</div><div class="geo-code">IT</div><div class="geo-tier">T2</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇵🇹</div><div class="geo-code">PT</div><div class="geo-tier">T2</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇬🇷</div><div class="geo-code">GR</div><div class="geo-tier">T2</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇨🇿</div><div class="geo-code">CZ</div><div class="geo-tier">T2</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇭🇺</div><div class="geo-code">HU</div><div class="geo-tier">T2</div></div>
+    <div class="geo-cell"><div class="geo-flag">🇹🇷</div><div class="geo-code">TR</div><div class="geo-tier">T3</div></div>
+  </div>
+</section>
+
+<!-- CONVERSION RATES -->
+<section>
+  <div class="section-header rv">
+    <div><div class="section-label">Средние показатели</div><h2 class="section-title">📈 Conversion Rates</h2></div>
+    <div class="section-count">Top-perform GEO</div>
+  </div>
+  <div class="metrics-row">
+    <div class="mrow"><div class="mrow-flag">🇩🇪</div><div class="mrow-val">10<span>%</span></div><div class="mrow-lbl">GERMANY · DE</div></div>
+    <div class="mrow"><div class="mrow-flag">🇬🇧</div><div class="mrow-val">10<span>%</span></div><div class="mrow-lbl">UNITED KINGDOM · UK</div></div>
+    <div class="mrow"><div class="mrow-flag">🇨🇦</div><div class="mrow-val">8–10<span>%</span></div><div class="mrow-lbl">CANADA · CA</div></div>
+    <div class="mrow"><div class="mrow-flag">🇹🇷</div><div class="mrow-val">6–7<span>%</span></div><div class="mrow-lbl">TURKEY · TR</div></div>
+  </div>
+</section>
+
+<!-- TEAM WISHES -->
+<section id="team" class="ai-section">
+  <div class="section-header rv">
+    <div><div class="section-label">От команды хочу</div><h2 class="section-title">🤝 Ожидания</h2></div>
+    <div class="section-count">05 — критериев</div>
+  </div>
+  <div class="ai-grid">
+    <div class="ai-left rv">
+      <h2 class="ai-headline">Сильная команда,<br>где <em>тимлид льёт больше</em><br>меня</h2>
+      <p class="ai-text">Ищу окружение, где могу расти в скорости и качестве. Совместный ресерч, автоматизация рутины, актуальная информация о том, что работает прямо сейчас.</p>
+    </div>
+    <div class="rv d2">
+      <ul class="ai-list">
+        <li>✅ Сильное комьюнити: топ-байеры, которые льют 50–100K+</li>
+        <li>✅ Совместный ресерч: синхронное тестирование гипотез и обмен результатами для быстрой оптимизации связок</li>
+        <li>✅ Помощь джунов: делегирование рутины, масштабирование связок</li>
+        <li>✅ Автоматизация: софт забирает рутину — автоправила, управление бюджетами на десятках аккаунтов</li>
+        <li>✅ Тимлид, который льёт больше меня. Командная работа и актуализация информации о том, что сейчас лучше всего работает</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section>
+  <div class="section-header rv">
+    <div><div class="section-label">Языки</div><h2 class="section-title">🌐 Languages</h2></div>
+    <div class="section-count">02 — активных</div>
+  </div>
+  <div class="metrics-row" style="grid-template-columns:1fr 1fr;">
+    <div class="mrow"><div class="mrow-flag">🇺🇦</div><div class="mrow-val">Native</div><div class="mrow-lbl">УКРАЇНСЬКА · РІДНА</div></div>
+    <div class="mrow"><div class="mrow-flag">🇬🇧</div><div class="mrow-val">B<span>2</span></div><div class="mrow-lbl">ENGLISH · UPPER INTERMEDIATE</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-label">Готов к запуску</div>
+  <h2 class="cta-title">Нужен байер, который<br><em>масштабирует связки</em>?</h2>
+  <p class="cta-sub">Напиши в Telegram — обсудим GEO, вертикаль, бюджеты и то, как будем расти вместе.</p>
+  <a href="https://t.me/FXSCXI" target="_blank" class="cta-tg">
+    <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="22.5" cy="22" r="21" stroke="currentColor" stroke-width="2"/><path d="M15 22h14M29 22l-5-5M29 22l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>@FXSCXI</span><span style="opacity:0.5">→</span>
+  </a>
+</section>
+
+<footer>
+  <div class="footer-logo">FX / MEDIA BUYER · CRYPTO · FB</div>
+  <div class="footer-copy">© 2026 · @FXSCXI</div>
+</footer>
+
+<script>
+// scroll line
+const sl=document.getElementById('scrollLine');
+addEventListener('scroll',()=>{const h=document.documentElement;const p=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;sl.style.width=p+'%';});
+
+// burger
+const burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>{burger.classList.toggle('open');mm.classList.toggle('open');});
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('open');mm.classList.remove('open');}));
+
+// reveal on scroll
+const rvObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');rvObs.unobserve(e.target);}});},{threshold:0.15});
+document.querySelectorAll('.rv').forEach(el=>rvObs.observe(el));
+
+// process track staggered reveal
+const track=document.getElementById('processTrack');
+if(track){const p=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){track.querySelectorAll('.pstep').forEach((s,i)=>setTimeout(()=>s.classList.add('visible'),i*130));p.disconnect();}});},{threshold:0.2});p.observe(track);}
+
+// interactive grid (About)
+(function(){
+  const sec=document.getElementById('about');
+  const grid=document.getElementById('aboutGrid');
+  if(!sec||!grid)return;
+  const CELL=23,GAP=2;let cols=0,rows=0,cells=[];
+  function build(){
+    const w=sec.clientWidth,h=sec.clientHeight;
+    cols=Math.ceil(w/(CELL+GAP));rows=Math.ceil(h/(CELL+GAP));
+    grid.style.gridTemplateColumns='repeat('+cols+','+CELL+'px)';
+    grid.style.gridAutoRows=CELL+'px';
+    grid.innerHTML='';cells=[];
+    const total=cols*rows;
+    const frag=document.createDocumentFragment();
+    for(let i=0;i<total;i++){const d=document.createElement('div');d.className='grid-cell';frag.appendChild(d);cells.push(d);}
+    grid.appendChild(frag);
+  }
+  function activate(idx){
+    const c=cells[idx];if(!c)return;
+    c.classList.add('active');clearTimeout(c._t);
+    c._t=setTimeout(()=>c.classList.remove('active'),600);
+  }
+  let idleTimer=null,idleInterval=null;
+  function startIdle(){
+    if(idleInterval)return;
+    idleInterval=setInterval(()=>{
+      if(!cells.length)return;
+      const isMob=window.innerWidth<=900;
+      const count=isMob?(1+Math.floor(Math.random()*2)):(2+Math.floor(Math.random()*2));
+      for(let i=0;i<count;i++){const idx=Math.floor(Math.random()*cells.length);activate(idx);}
+    },400);
+  }
+  function stopIdle(){if(idleInterval){clearInterval(idleInterval);idleInterval=null;}}
+  function onInteract(){stopIdle();clearTimeout(idleTimer);idleTimer=setTimeout(startIdle,2000);}
+  sec.addEventListener('mousemove',e=>{
+    onInteract();
+    const r=grid.getBoundingClientRect();
+    const x=e.clientX-r.left,y=e.clientY-r.top;
+    if(x<0||y<0)return;
+    const col=Math.floor(x/(CELL+GAP)),row=Math.floor(y/(CELL+GAP));
+    if(col<0||col>=cols||row<0||row>=rows)return;
+    activate(row*cols+col);
+  });
+  sec.addEventListener('mouseleave',()=>{clearTimeout(idleTimer);idleTimer=setTimeout(startIdle,2000);});
+  build();
+  let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(build,200);});
+  setTimeout(startIdle,2000);
+})();
+
+// particle sphere
+(function(){
+  const canvas=document.getElementById('particleCanvas');if(!canvas)return;
+  const ctx=canvas.getContext('2d');const w=innerWidth;const isSmall=w<=480;const isMobile=w<=900;
+  const SIZE=isSmall?440:isMobile?546:710;canvas.width=SIZE;canvas.height=SIZE;
+  const CX=SIZE/2,CY=SIZE/2,R=isSmall?180:isMobile?230:275,TOTAL=isSmall?900:isMobile?1200:1500;
+  let hovering=false,rotX=0,rotY=0,tRX=0,tRY=0,pulseTime=0,autoAngle=0;const pts=[];const g=Math.PI*(3-Math.sqrt(5));
+  for(let i=0;i<TOTAL;i++){const y=1-(i/(TOTAL-1))*2,r=Math.sqrt(1-y*y),t=g*i;
+    const isStar=Math.random()<0.25;
+    pts.push({ox:Math.cos(t)*r,oy:y,oz:Math.sin(t)*r,sz:Math.random()*1.2+0.3,br:Math.random()*.5+.3,
+      star:isStar,twinkleSpeed:isStar?(Math.random()*2+1.5):0,twinklePhase:Math.random()*Math.PI*2,twinkleMax:isStar?(Math.random()*0.6+0.4):0
+    });}
+  const hero=document.querySelector('.hero');
+  if(!isMobile){hero.addEventListener('mousemove',e=>{const rc=canvas.getBoundingClientRect();hovering=true;tRY=((e.clientX-rc.left-CX)/CX)*.6;tRX=((e.clientY-rc.top-CY)/CY)*-.4;});hero.addEventListener('mouseleave',()=>{hovering=false;tRX=0;tRY=0;});}
+  function draw(){
+    ctx.clearRect(0,0,SIZE,SIZE);rotX+=(tRX-rotX)*.06;rotY+=(tRY-rotY)*.06;if(!hovering)autoAngle+=isMobile?.004:.002;pulseTime+=.025;
+    const ps=1+Math.sin(pulseTime)*(isMobile?.07:.04);
+    const cRX=Math.cos(rotX),sRX=Math.sin(rotX),cRY=Math.cos(rotY+autoAngle),sRY=Math.sin(rotY+autoAngle);
+    const proj=pts.map(p=>{let x=p.ox*cRY-p.oz*sRY,z=p.ox*sRY+p.oz*cRY;let y=p.oy*cRX-z*sRX;z=p.oy*sRX+z*cRX;
+      let baseBr=p.br*((z+1.5)/2.5);
+      let twinkle=0;
+      if(p.star){const tw=Math.sin(pulseTime*p.twinkleSpeed+p.twinklePhase);twinkle=Math.max(0,tw)*p.twinkleMax;}
+      return{sx:CX+x*R*ps,sy:CY+y*R*ps,depth:(z+1)/2,sz:p.sz*((z+1.5)/2.5)*(1+twinkle*0.8),br:baseBr,twinkle:twinkle,star:p.star};});
+    proj.sort((a,b)=>a.depth-b.depth);
+    proj.forEach(p=>{
+      let a=Math.min(p.br*(hovering?1:.75),1);
+      if(p.star&&p.twinkle>0.1){
+        a=Math.min(a+p.twinkle*1.2,1);
+        const glow=p.twinkle*8;
+        ctx.shadowColor='rgba(200,255,0,'+(p.twinkle*0.7).toFixed(2)+')';ctx.shadowBlur=glow;
+        ctx.beginPath();ctx.arc(p.sx,p.sy,p.sz,0,Math.PI*2);
+        ctx.fillStyle='rgba(200,255,0,'+(p.twinkle*0.9).toFixed(2)+')';ctx.fill();
+        ctx.shadowBlur=0;ctx.shadowColor='transparent';
+      }
+      ctx.beginPath();ctx.arc(p.sx,p.sy,p.sz,0,Math.PI*2);ctx.fillStyle='rgba(255,255,255,'+a.toFixed(2)+')';ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
