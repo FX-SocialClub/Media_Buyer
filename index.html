@@ -388,6 +388,9 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
 </style>
 <style>
 /* ---- media-buyer specific ---- */
+.metrics-2{grid-template-columns:1fr 1fr;}
+@media(max-width:480px){.metrics-2{grid-template-columns:1fr;}}
+
 .process-track{grid-template-columns:repeat(4,1fr);}
 @media(max-width:1250px){.process-track{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:600px){.process-track{grid-template-columns:1fr;}}
@@ -715,7 +718,7 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
       <h2 class="section-title"><svg class="ico sec-ico" aria-hidden="true"><use href="#i-trend"/></svg><span data-ua="Масштабування" data-en="Scaling">Масштабування</span></h2></div>
     <div class="section-count" data-ua="03 — вектори" data-en="03 — vectors">03 — вектори</div>
   </div>
-  <div class="services-grid" style="grid-template-columns:repeat(3,1fr);">
+  <div class="services-grid">
     <div class="service-card rv"><div class="service-num" data-ua="01 · ГОРИЗОНТАЛЬ" data-en="01 · HORIZONTAL">01 · ГОРИЗОНТАЛЬ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-scale-h"/></svg></div>
       <div class="service-name" data-ua="Горизонтальне" data-en="Horizontal">Горизонтальне</div>
       <p class="service-desc" data-ua="Дублювання робочих кампаній і адсетів. Запуск на нових акаунтах і Fan Pages. Масштабування через бюджети та аудиторії." data-en="Duplicating working campaigns and ad sets. Launching on new accounts and Fan Pages. Scaling through budgets and audiences.">Дублювання робочих кампаній і адсетів. Запуск на нових акаунтах і Fan Pages. Масштабування через бюджети та аудиторії.</p>
@@ -850,7 +853,7 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
       <h2 class="section-title"><svg class="ico sec-ico" aria-hidden="true"><use href="#i-globe"/></svg><span>Languages</span></h2></div>
     <div class="section-count" data-ua="02 — активні" data-en="02 — active">02 — активні</div>
   </div>
-  <div class="metrics-row" style="grid-template-columns:1fr 1fr;">
+  <div class="metrics-row metrics-2">
     <div class="mrow"><div class="mrow-flag"><svg class="ico" aria-hidden="true"><use href="#i-flag-ua"/></svg>UA</div><div class="mrow-val">Native</div><div class="mrow-lbl">УКРАЇНСЬКА · РІДНА</div></div>
     <div class="mrow"><div class="mrow-flag"><svg class="ico" aria-hidden="true"><use href="#i-flag-en"/></svg>EN</div><div class="mrow-val">B<span>2</span></div><div class="mrow-lbl">ENGLISH · UPPER INTERMEDIATE</div></div>
   </div>
