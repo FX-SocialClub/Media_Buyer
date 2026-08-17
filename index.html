@@ -9,8 +9,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Special+Elite&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-
 <style>
 :root{
   --black:#000; --dark:#080808; --card:#0d0d0d; --card2:#111;
@@ -68,9 +66,7 @@ body{font-family:'Share Tech Mono',monospace;background:var(--black);color:var(-
 body::before{content:'';position:fixed;inset:0;z-index:0;
   background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
   background-size:69px 69px;pointer-events:none;}
-
 .scroll-line{position:fixed;top:0;left:0;height:2px;z-index:1000;background:var(--accent);box-shadow:var(--glow);width:0%;transition:background .35s;}
-
 nav{position:fixed;top:0;left:0;width:100%;z-index:500;height:64px;padding:0 48px;
   display:flex;align-items:center;justify-content:space-between;gap:16px;
   background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
@@ -87,7 +83,6 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:500;height:64px;padding:0 48p
 .nav-cta{background:transparent!important;border:1px solid var(--border2)!important;color:var(--white)!important;
   padding:8px 20px;border-radius:4px;font-size:12px!important;cursor:pointer;transition:all .2s!important;text-decoration:none;font-family:'Share Tech Mono',monospace;white-space:nowrap;}
 .nav-cta:hover{border-color:var(--accent)!important;color:var(--accent)!important;}
-
 /* ---- language dropdown ---- */
 .lang-select{position:relative;flex-shrink:0;}
 .ls-btn{display:flex;align-items:center;gap:8px;height:30px;padding:0 10px;background:var(--card2);
@@ -125,7 +120,6 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:500;height:64px;padding:0 48p
 @media(prefers-reduced-motion:reduce){
   .ls-menu,.ls-opt,.ls-caret,.ls-check{transition-duration:.01ms!important;}
 }
-
 /* ---- theme (colour) dropdown ---- */
 .theme-select{position:relative;flex-shrink:0;}
 .ts-btn{display:flex;align-items:center;gap:8px;height:30px;padding:0 9px;background:var(--card2);
@@ -167,7 +161,6 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:500;height:64px;padding:0 48p
 @media(prefers-reduced-motion:reduce){
   .ts-menu,.ts-opt,.ts-caret,.ts-check{transition-duration:.01ms!important;}
 }
-
 .nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
 .nav-burger span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .3s;}
 .nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
@@ -180,7 +173,6 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:500;height:64px;padding:0 48p
   color:var(--lgrey);text-decoration:none;padding:15px 0;border-bottom:1px solid var(--border);transition:color .2s;}
 .mobile-menu a:hover{color:var(--white);}
 .mobile-menu .m-cta{color:var(--accent)!important;border-bottom:none!important;margin-top:8px;}
-
 .hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 48px 80px;overflow:hidden;}
 .hero-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);
   text-transform:uppercase;margin-bottom:26px;display:flex;align-items:center;gap:10px;
@@ -215,18 +207,14 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:500;height:64px;padding:0 48p
   .hero-deco{width:440px;height:440px;opacity:0.42;}
   #particleCanvas{width:440px!important;height:440px!important;}
 }
-
 section{position:relative;z-index:1;padding:100px 48px;}
 .section-header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:60px;border-bottom:1px solid var(--border);padding-bottom:24px;}
 .section-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:12px;text-shadow:0 0 8px rgba(var(--accent-rgb),0.21);}
 .section-title{font-family:'Share Tech Mono',monospace;font-size:clamp(26px,3.5vw,44px);font-weight:700;letter-spacing:-0.02em;line-height:1.1;}
 .section-count{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--grey);letter-spacing:0.1em;white-space:nowrap;}
-
 .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
 .rv.vis{opacity:1;transform:none;}
 .d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}.d4{transition-delay:.32s;}.d5{transition-delay:.4s;}
-
-
 /* ---- custom icon system ---- */
 .ico{display:block;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.6;
   stroke-linecap:round;stroke-linejoin:round;}
@@ -240,13 +228,11 @@ section{position:relative;z-index:1;padding:100px 48px;}
   filter:drop-shadow(0 0 8px rgba(var(--accent-rgb),0.28));}
 .ai-list li:not(.ic)::before{content:'';width:7px;height:7px;margin-top:7px;background:var(--accent);
   transform:rotate(45deg);box-shadow:0 0 8px rgba(var(--accent-rgb),0.5);}
-
 .marquee-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;padding:18px 0;position:relative;z-index:1;}
 .marquee-track{display:flex;gap:0;animation:marquee-go 34s linear infinite;white-space:nowrap;width:max-content;}
 .marquee-item{display:inline-flex;align-items:center;gap:16px;padding:0 32px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.15em;color:var(--grey);text-transform:uppercase;}
 .marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;transition:background .3s;}
 @keyframes marquee-go{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
 .ai-section{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .ai-headline{font-family:'Share Tech Mono',monospace;font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:20px;}
@@ -262,13 +248,11 @@ section{position:relative;z-index:1;padding:100px 48px;}
 .ai-metric-val{font-family:'Share Tech Mono',monospace;font-size:30px;font-weight:700;color:var(--white);line-height:1;margin-bottom:6px;}
 .ai-metric-val span{color:var(--accent);}
 .ai-metric-label{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--grey);line-height:1.5;}
-
 #about{overflow:hidden;}
 #about .section-header,#about .ai-grid{position:relative;z-index:2;}
 .grid-bg{position:absolute;inset:0;z-index:0;display:grid;gap:2px;pointer-events:none;touch-action:pan-y;overflow:hidden;}
 .grid-cell{background:var(--cell);transition:background 1.4s ease, box-shadow 1.4s ease;}
 .grid-cell.active{background:var(--accent);box-shadow:0 0 10px rgba(var(--accent-rgb),0.4);transition:background 0s, box-shadow 0s;}
-
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
 .service-card{background:var(--black);padding:40px 36px;position:relative;overflow:hidden;transition:background .3s;}
 .service-card:hover{background:var(--card);}
@@ -286,14 +270,12 @@ section{position:relative;z-index:1;padding:100px 48px;}
   .service-card.rv.vis .service-icon{box-shadow:var(--glow);border-color:var(--accent);}
   .service-card.rv.vis .service-num{color:var(--accent);}
 }
-
 /* project links */
 .proj-links{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
 .proj-link{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.05em;color:var(--accent);
   text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:opacity .2s;word-break:break-all;}
 .proj-link::before{content:'↗';flex-shrink:0;}
 .proj-link:hover{opacity:.65;}
-
 .process-track{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);position:relative;}
 .pstep{padding:38px 24px 34px;background:var(--black);position:relative;z-index:1;
   opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease,background .25s;}
@@ -309,7 +291,6 @@ section{position:relative;z-index:1;padding:100px 48px;}
 .ps-title{font-family:'Share Tech Mono',monospace;font-size:16px;font-weight:600;margin-bottom:10px;letter-spacing:-0.01em;line-height:1.25;}
 .ps-desc{font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--lgrey);line-height:1.65;margin-bottom:20px;}
 .ps-tag{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;border:1px solid var(--accent2);padding:4px 10px;border-radius:2px;display:inline-block;text-shadow:0 0 6px rgba(var(--accent-rgb),0.21);}
-
 .metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
 .mrow{background:var(--black);padding:32px 26px;}
 .mrow-flag{font-size:24px;margin-bottom:14px;line-height:1;}
@@ -318,7 +299,6 @@ section{position:relative;z-index:1;padding:100px 48px;}
 .mrow-lbl{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--grey);line-height:1.55;letter-spacing:0.06em;}
 @media(max-width:900px){.metrics-row{grid-template-columns:1fr 1fr;}}
 @media(max-width:480px){.metrics-row{grid-template-columns:1fr;}}
-
 .cta-section{padding:120px 48px;text-align:center;position:relative;z-index:1;border-top:1px solid var(--border);}
 .cta-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:24px;}
 .cta-title{font-family:'Share Tech Mono',monospace;font-size:clamp(28px,5vw,64px);font-weight:700;letter-spacing:-0.03em;line-height:1.08;margin-bottom:20px;}
@@ -326,11 +306,9 @@ section{position:relative;z-index:1;padding:100px 48px;}
 .cta-sub{font-family:'Share Tech Mono',monospace;font-size:15px;color:var(--lgrey);margin-bottom:48px;max-width:540px;margin-inline:auto;line-height:1.7;}
 .cta-tg{display:inline-flex;align-items:center;gap:14px;font-family:'Share Tech Mono',monospace;font-size:16px;color:var(--white);text-decoration:none;padding:18px 36px;border:1px solid var(--accent);border-radius:6px;background:var(--accent3);letter-spacing:0.06em;transition:all .25s;}
 .cta-tg:hover{background:var(--accent);color:var(--on-accent);box-shadow:var(--glow);}
-
 footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;}
 .footer-logo{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--grey);letter-spacing:0.06em;}
 .footer-copy{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--grey);letter-spacing:0.05em;}
-
 @media(max-width:1250px){
   .process-track{grid-template-columns:repeat(3,1fr);}
 }
@@ -374,7 +352,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   .nav-logo-text{display:none;}
 }
 .mrow-val,.ai-metric-val,.service-name,.ps-title,.hero-role{overflow-wrap:break-word;}
-
 @keyframes neon-flicker{
   0%,100%{text-shadow:0 0 7px rgba(var(--accent-rgb),0.56),0 0 20px rgba(var(--accent-rgb),0.28),0 0 40px rgba(var(--accent-rgb),0.14);opacity:1;}
   42%{text-shadow:0 0 3px rgba(var(--accent-rgb),0.28),0 0 10px rgba(var(--accent-rgb),0.14);opacity:0.88;}
@@ -390,11 +367,9 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
 /* ---- media-buyer specific ---- */
 .metrics-2{grid-template-columns:1fr 1fr;}
 @media(max-width:480px){.metrics-2{grid-template-columns:1fr;}}
-
 .process-track{grid-template-columns:repeat(4,1fr);}
 @media(max-width:1250px){.process-track{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:600px){.process-track{grid-template-columns:1fr;}}
-
 .geo-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
 .geo-cell{background:var(--black);padding:22px 12px;text-align:center;transition:background .25s;position:relative;overflow:hidden;}
 .geo-cell:hover{background:var(--card);}
@@ -408,10 +383,8 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
 .geo-cell[data-tier="2"] .geo-bar{background:rgba(var(--accent-rgb),0.45);}
 @media(max-width:900px){.geo-grid{grid-template-columns:repeat(4,1fr);}}
 @media(max-width:480px){.geo-grid{grid-template-columns:repeat(3,1fr);}}
-
 .mrow-flag{display:flex;align-items:center;gap:10px;font-family:'Share Tech Mono',monospace;font-size:12px;
   letter-spacing:0.12em;color:var(--accent);margin-bottom:14px;line-height:1;}
-
 .proj-card{background:var(--black);border:1px solid var(--border);padding:34px 32px;position:relative;overflow:hidden;transition:background .3s;}
 .proj-card:hover{background:var(--card);}
 .proj-card::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent);transition:width .45s ease;}
@@ -425,11 +398,9 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
 .proj-desc{font-family:'Share Tech Mono',monospace;font-size:13.5px;color:var(--lgrey);line-height:1.75;}
 .proj-stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;}
 @media(max-width:900px){.proj-card{padding:28px 22px;}}
-
 </style>
 </head>
 <body>
-
 <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" focusable="false">
 <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/><path d="M12 1v3.5M12 19.5V23M1 12h3.5M19.5 12H23"/></symbol>
 <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="6"/><path d="M12 5.6l1.3 2.2 2.5.5-1.7 1.9.3 2.5-2.4-1.1-2.4 1.1.3-2.5-1.7-1.9 2.5-.5z"/><path d="M8.4 13.6 7 22.5l5-2.7 5 2.7-1.4-8.9"/></symbol>
@@ -474,9 +445,7 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
 <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M2 8.5 6 6l4.2 1.6L14 6l4.4 1.4L22 9"/><path d="m10.2 7.6-3.4 3a1.8 1.8 0 0 0 2.4 2.7l1.6-1.3 4 3.6"/><path d="m14 15.6 2.2 2M11.4 17.4l1.6 1.4M18 8.4v6.2"/></symbol>
 <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.4 2 4.6 13.4h6L9.8 22l9-11.6h-6.2z"/></symbol>
 </svg>
-
 <div class="scroll-line" id="scrollLine"></div>
-
 <nav>
   <a href="#home" class="nav-logo">
     <div class="nav-logo-mark">FX</div>
@@ -490,7 +459,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
       <a href="#automation" data-ua="Автоматизація" data-ru="Автоматизация" data-en="Automation">Автоматизація</a>
       <a href="#geo" data-ua="GEO" data-ru="GEO" data-en="GEO">GEO</a>
     </div>
-
     <div class="lang-select" id="langSelect">
       <button type="button" class="ls-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
         <span class="ls-cur" id="langCur">UA</span>
@@ -502,7 +470,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
         <button type="button" class="ls-opt" role="option" data-lang="ru" aria-selected="false"><span class="ls-code">RU</span><svg class="ico ls-check" aria-hidden="true"><use href="#i-check"/></svg></button>
       </div>
     </div>
-
     <div class="theme-select" id="themeSelect">
       <button type="button" class="ts-btn" id="themeBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Colour">
         <span class="ts-dot"></span>
@@ -514,12 +481,10 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
         <button type="button" class="ts-opt" role="option" data-theme-value="red" aria-selected="false"><span class="ts-sw sw-red"></span><span data-ua="Червоний" data-ru="Красный" data-en="Red">Червоний</span><svg class="ico ts-check" aria-hidden="true"><use href="#i-check"/></svg></button>
       </div>
     </div>
-
     <a href="https://t.me/FXSCXI" target="_blank" rel="noopener" class="nav-cta" data-ua="Контакт" data-ru="Контакт" data-en="Contact">Контакт</a>
   </div>
   <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" data-ua="Досвід" data-ru="Опыт" data-en="Experience">Досвід</a>
   <a href="#skills" data-ua="Навички" data-ru="Навыки" data-en="Skills">Навички</a>
@@ -529,7 +494,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   <a href="#geo" data-ua="GEO" data-ru="GEO" data-en="GEO">GEO</a>
   <a href="https://t.me/FXSCXI" target="_blank" rel="noopener" class="m-cta" data-ua="Написати в Telegram →" data-ru="Написать в Telegram →" data-en="Message on Telegram →">Написати в Telegram →</a>
 </div>
-
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-label">Media Buyer × Crypto × iGaming × Facebook Ads × In-App</div>
@@ -548,7 +512,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     <div class="stat-item"><div class="stat-num">20<span>+</span></div><div class="stat-label">GEO</div></div>
   </div>
 </section>
-
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
@@ -584,7 +547,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     <span class="marquee-item"><span class="marquee-dot"></span>Unit Economics</span>
   </div>
 </div>
-
 <!-- ABOUT -->
 <section id="about" class="ai-section">
   <div class="grid-bg" id="aboutGrid" aria-hidden="true"></div>
@@ -616,7 +578,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     </div>
   </div>
 </section>
-
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-header rv">
@@ -629,54 +590,44 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
       <div class="service-name" data-ua="Запуск кампаній" data-ru="Запуск кампаний" data-en="Campaign launch">Запуск кампаній</div>
       <p class="service-desc" data-ua="Розробка стратегій запуску під ключові GEO. Оптимізація під KPI та юніт-економіку з першого дня." data-ru="Разработка стратегий запуска под ключевые GEO. Оптимизация под KPI и юнит-экономику с первого дня." data-en="Launch strategies for key GEOs. Optimised against KPI and unit economics from day one.">Розробка стратегій запуску під ключові GEO. Оптимізація під KPI та юніт-економіку з першого дня.</p>
       <div class="service-tags"><span class="svc-tag">Facebook</span><span class="svc-tag">Tier 1-3</span><span class="svc-tag">In-App</span></div></div>
-
     <div class="service-card rv d1"><div class="service-num">02</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg></div>
       <div class="service-name" data-ua="Тест зв'язок" data-ru="Тест связок" data-en="Bundle testing">Тест зв'язок</div>
       <p class="service-desc" data-ua="Розробка і тестування зв'язок Creative / Audience / Landing. Гіпотеза → тест → валідація → масштаб." data-ru="Разработка и тестирование связок Creative / Audience / Landing. Гипотеза → тест → валидация → масштаб." data-en="Building and testing Creative / Audience / Landing bundles. Hypothesis → test → validation → scale.">Розробка і тестування зв'язок Creative / Audience / Landing. Гіпотеза → тест → валідація → масштаб.</p>
       <div class="service-tags"><span class="svc-tag">Creative</span><span class="svc-tag">Audience</span><span class="svc-tag">Landing</span></div></div>
-
     <div class="service-card rv d2"><div class="service-num">03</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-analytics"/></svg></div>
       <div class="service-name" data-ua="Трекінг і аналітика" data-ru="Трекинг и аналитика" data-en="Tracking & analytics">Трекінг і аналітика</div>
       <p class="service-desc" data-ua="Keitaro, чиста аналітика по всій воронці, відстеження CPL/CPM/ROI у реальному часі." data-ru="Keitaro, чистая аналитика по всей воронке, отслеживание CPL/CPM/ROI в реальном времени." data-en="Keitaro, clean full-funnel analytics, real-time CPL/CPM/ROI tracking.">Keitaro, чиста аналітика по всій воронці, відстеження CPL/CPM/ROI у реальному часі.</p>
       <div class="service-tags"><span class="svc-tag">Keitaro</span><span class="svc-tag">KPI</span><span class="svc-tag">Unit-ec.</span></div></div>
-
     <div class="service-card rv"><div class="service-num">04</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></div>
       <div class="service-name" data-ua="AI-креативи" data-ru="AI-креативы" data-en="AI creatives">AI-креативи</div>
       <p class="service-desc" data-ua="Генерація контенту (фото і відео) для креативів через Higgsfield. Власний пайплайн під швидкий тест візуалів під GEO і оффер." data-ru="Генерация контента (фото и видео) для креативов через Higgsfield. Свой пайплайн под быстрый тест визуалов под GEO и оффер." data-en="Photo and video content generation for creatives via Higgsfield. My own pipeline for fast visual testing per GEO and offer.">Генерація контенту (фото і відео) для креативів через Higgsfield. Власний пайплайн під швидкий тест візуалів під GEO і оффер.</p>
       <div class="service-tags"><span class="svc-tag">Higgsfield</span><span class="svc-tag">Photo</span><span class="svc-tag">Video</span></div></div>
-
     <div class="service-card rv d1"><div class="service-num">05</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></div>
       <div class="service-name">Playable Ads</div>
       <p class="service-desc" data-ua="Інтерактивні playable-креативи на HTML під In-App трафік. Механіка, анімація і CTA пишуться під конкретний оффер і GEO." data-ru="Интерактивные playable-креативы на HTML под In-App трафик. Механика, анимация и CTA пишутся под конкретный оффер и GEO." data-en="Interactive HTML playable creatives for In-App traffic. Mechanics, animation and CTA written for a specific offer and GEO.">Інтерактивні playable-креативи на HTML під In-App трафік. Механіка, анімація і CTA пишуться під конкретний оффер і GEO.</p>
       <div class="service-tags"><span class="svc-tag">HTML5</span><span class="svc-tag">In-App</span><span class="svc-tag">Interactive</span></div></div>
-
     <div class="service-card rv d2"><div class="service-num">06</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-robot"/></svg></div>
       <div class="service-name" data-ua="Автоматизація через AI" data-ru="Автоматизация через AI" data-en="AI automation">Автоматизація через AI</div>
       <p class="service-desc" data-ua="Технічка та автоматизація процесів через AI. Автозалив, автоправила, управління бюджетами на десятках акаунтів без ручної роботи." data-ru="Техничка и автоматизация процессов через AI. Автозалив, автоправила, управление бюджетами на десятках аккаунтов без ручного труда." data-en="Tech setup and process automation with AI. Auto-upload, auto-rules, budget management across dozens of accounts without manual work.">Технічка та автоматизація процесів через AI. Автозалив, автоправила, управління бюджетами на десятках акаунтів без ручної роботи.</p>
       <div class="service-tags"><span class="svc-tag">AI</span><span class="svc-tag">Auto-rules</span><span class="svc-tag">SOFT</span></div></div>
-
     <div class="service-card rv"><div class="service-num">07</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-browser"/></svg></div>
       <div class="service-name" data-ua="UX/UI ленди" data-ru="UX/UI ленды" data-en="UX/UI landings">UX/UI ленди</div>
       <p class="service-desc" data-ua="Розробка лендингів під оффер — від UX-логіки і структури до фінального UI. Ленд заточений під конкретну зв'язку і GEO." data-ru="Разработка лендингов под оффер — от UX-логики и структуры до финального UI. Ленд заточен под конкретную связку и GEO." data-en="Landing pages built around the offer — from UX logic and structure to final UI. Tailored to a specific bundle and GEO.">Розробка лендингів під оффер — від UX-логіки і структури до фінального UI. Ленд заточений під конкретну зв'язку і GEO.</p>
       <div class="service-tags"><span class="svc-tag">UX</span><span class="svc-tag">UI</span><span class="svc-tag">Landing</span></div></div>
-
     <div class="service-card rv d1"><div class="service-num">08</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></div>
       <div class="service-name" data-ua="Клоакінг" data-ru="Клоакинг" data-en="Cloaking">Клоакінг</div>
       <p class="service-desc" data-ua="Обхід модерації, чиста робота в сірих вертикалях, стабільний залив без банів." data-ru="Обход модерации, чистая работа в серых вертикалях, стабильный залив без банов." data-en="Passing moderation, clean work in grey verticals, stable delivery without bans.">Обхід модерації, чиста робота в сірих вертикалях, стабільний залив без банів.</p>
       <div class="service-tags"><span class="svc-tag">Cloaking</span><span class="svc-tag">Anti-ban</span><span class="svc-tag">Crypto</span></div></div>
-
     <div class="service-card rv d2"><div class="service-num">09</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg></div>
       <div class="service-name">Research</div>
       <p class="service-desc" data-ua="Google Trends, Facebook Ads Library, локальні форуми і медіа — валідація оффера під GEO." data-ru="Google Trends, Facebook Ads Library, локальные форумы и медиа — валидация оффера под GEO." data-en="Google Trends, Facebook Ads Library, local forums and media — offer validation per GEO.">Google Trends, Facebook Ads Library, локальні форуми і медіа — валідація оффера під GEO.</p>
       <div class="service-tags"><span class="svc-tag">Trends</span><span class="svc-tag">Ads Lib</span><span class="svc-tag">Local</span></div></div>
-
     <div class="service-card rv"><div class="service-num">10</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg></div>
       <div class="service-name" data-ua="Технічка" data-ru="Техничка" data-en="Tech setup">Технічка</div>
       <p class="service-desc" data-ua="Налаштування технічної інфраструктури під залив: домени, трекери, антидетект, інтеграції — все під ключ без чужої допомоги." data-ru="Настройка технической инфраструктуры под залив: домены, трекеры, антидетект, интеграции — всё под ключ без чужой помощи." data-en="Full tech infrastructure setup: domains, trackers, antidetect, integrations — end to end, on my own.">Налаштування технічної інфраструктури під залив: домени, трекери, антидетект, інтеграції — все під ключ без чужої допомоги.</p>
       <div class="service-tags"><span class="svc-tag">Setup</span><span class="svc-tag">Anti-det.</span><span class="svc-tag">Integr.</span></div></div>
   </div>
 </section>
-
 <!-- APPROACH -->
 <section id="approach" class="ai-section">
   <div class="section-header rv">
@@ -711,7 +662,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     </div>
   </div>
 </section>
-
 <!-- SCALING -->
 <section id="scale">
   <div class="section-header rv">
@@ -724,19 +674,16 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
       <div class="service-name" data-ua="Горизонтальне" data-ru="Горизонтальное" data-en="Horizontal">Горизонтальне</div>
       <p class="service-desc" data-ua="Дублювання робочих кампаній і адсетів. Запуск на нових акаунтах і Fan Pages. Масштабування через бюджети та аудиторії." data-ru="Дублирование рабочих кампаний и адсетов. Запуск на новых аккаунтах и Fan Pages. Масштабирование через бюджеты и аудитории." data-en="Duplicating working campaigns and ad sets. Launching on new accounts and Fan Pages. Scaling through budgets and audiences.">Дублювання робочих кампаній і адсетів. Запуск на нових акаунтах і Fan Pages. Масштабування через бюджети та аудиторії.</p>
       <div class="service-tags"><span class="svc-tag">Duplicate</span><span class="svc-tag">New accs</span><span class="svc-tag">Fan Pages</span></div></div>
-
     <div class="service-card rv d1"><div class="service-num" data-ua="02 · ВЕРТИКАЛЬ" data-ru="02 · ВЕРТИКАЛЬ" data-en="02 · VERTICAL">02 · ВЕРТИКАЛЬ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg></div>
       <div class="service-name" data-ua="Вертикальне" data-ru="Вертикальное" data-en="Vertical">Вертикальне</div>
       <p class="service-desc" data-ua="Поступове зростання бюджету +20–30% кожні 24 години. Акуратний тиск на робочу зв'язку без втрати якості трафіку." data-ru="Постепенный рост бюджета +20–30% каждые 24 часа. Аккуратное давление на рабочую связку без потери качества трафика." data-en="Gradual budget growth of +20–30% every 24 hours. Careful pressure on a working bundle without losing traffic quality.">Поступове зростання бюджету +20–30% кожні 24 години. Акуратний тиск на робочу зв'язку без втрати якості трафіку.</p>
       <div class="service-tags"><span class="svc-tag">+20-30%</span><span class="svc-tag">24h step</span></div></div>
-
     <div class="service-card rv d2"><div class="service-num" data-ua="03 · АУДИТОРІЇ" data-ru="03 · АУДИТОРИИ" data-en="03 · AUDIENCES">03 · АУДИТОРІЇ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></div>
       <div class="service-name" data-ua="За аудиторіями" data-ru="По аудиториям" data-en="By audiences">За аудиторіями</div>
       <p class="service-desc" data-ua="Розширення ЦА: вузькі інтереси → Broad. Lookalike 1% → 3–5%. Пошук свіжих пулів усередині робочої зв'язки." data-ru="Расширение ЦА: узкие интересы → Broad. Lookalike 1% → 3–5%. Поиск свежих пулов внутри рабочей связки." data-en="Audience expansion: narrow interests → Broad. Lookalike 1% → 3–5%. Finding fresh pools inside a working bundle.">Розширення ЦА: вузькі інтереси → Broad. Lookalike 1% → 3–5%. Пошук свіжих пулів усередині робочої зв'язки.</p>
       <div class="service-tags"><span class="svc-tag">Broad</span><span class="svc-tag">LAL 1-5%</span><span class="svc-tag">Interests</span></div></div>
   </div>
 </section>
-
 <!-- AUTOMATION & AI -->
 <section id="automation" class="ai-section">
   <div class="section-header rv">
@@ -776,7 +723,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     </div>
   </div>
 </section>
-
 <!-- GEO -->
 <section id="geo">
   <div class="section-header rv">
@@ -807,7 +753,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     <div class="geo-cell" data-tier="3"><div class="geo-code">TR</div><div class="geo-tier">TIER 3</div><div class="geo-bar"></div></div>
   </div>
 </section>
-
 <!-- CONVERSION RATES -->
 <section class="ai-section">
   <div class="section-header rv">
@@ -822,7 +767,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     <div class="mrow"><div class="mrow-flag"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg>TR</div><div class="mrow-val">6–7<span>%</span></div><div class="mrow-lbl">TURKEY · TIER 3</div></div>
   </div>
 </section>
-
 <!-- TEAM WISHES -->
 <section id="team">
   <div class="section-header rv">
@@ -832,21 +776,20 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   </div>
   <div class="ai-grid">
     <div class="ai-left rv">
-      <h2 class="ai-headline" data-ua="Сильна команда,<br>де <em>тімлід ллє більше</em><br>за мене" data-ru="Сильная команда,<br>где <em>тимлид льёт больше</em><br>меня" data-en="A strong team where<br>the <em>team lead runs more</em><br>volume than me">Сильна команда,<br>де <em>тімлід ллє більше</em><br>за мене</h2>
+      <h2 class="ai-headline" data-ua="Сильна команда,<br>де можна <em>рости<br>швидше</em>" data-ru="Сильная команда,<br>где можно <em>расти<br>быстрее</em>" data-en="A strong team where<br>I can <em>grow<br>faster</em>">Сильна команда,<br>де можна <em>рости<br>швидше</em></h2>
       <p class="ai-text" data-ua="Шукаю оточення, де можу рости в швидкості та якості. Спільний ресерч, автоматизація рутини, актуальна інформація про те, що працює прямо зараз." data-ru="Ищу окружение, где могу расти в скорости и качестве. Совместный ресерч, автоматизация рутины, актуальная информация о том, что работает прямо сейчас." data-en="I am looking for an environment where I can grow in speed and quality. Joint research, routine automation, up-to-date knowledge of what works right now.">Шукаю оточення, де можу рости в швидкості та якості. Спільний ресерч, автоматизація рутини, актуальна інформація про те, що працює прямо зараз.</p>
     </div>
     <div class="rv d2">
       <ul class="ai-list">
         <li class="ic"><svg class="ico li-ico" aria-hidden="true"><use href="#i-users"/></svg><span data-ua="Сильне ком'юніті: топ-баєри, які ллють 50–100K+" data-ru="Сильное комьюнити: топ-байеры, которые льют 50–100K+" data-en="A strong community: top buyers running 50–100K+">Сильне ком'юніті: топ-баєри, які ллють 50–100K+</span></li>
+        <li class="ic"><svg class="ico li-ico" aria-hidden="true"><use href="#i-award"/></svg><span data-ua="Тімлід, який ллє більше за мене — командна робота й актуалізація того, що зараз працює найкраще" data-ru="Тимлид, который льёт больше меня — командная работа и актуализация того, что сейчас работает лучше всего" data-en="A team lead who runs more volume than me — teamwork and constant updates on what performs best right now">Тімлід, який ллє більше за мене — командна робота й актуалізація того, що зараз працює найкраще</span></li>
         <li class="ic"><svg class="ico li-ico" aria-hidden="true"><use href="#i-search"/></svg><span data-ua="Спільний ресерч: синхронне тестування гіпотез і обмін результатами для швидкої оптимізації зв'язок" data-ru="Совместный ресерч: синхронное тестирование гипотез и обмен результатами для быстрой оптимизации связок" data-en="Joint research: synchronised hypothesis testing and result sharing for faster bundle optimisation">Спільний ресерч: синхронне тестування гіпотез і обмін результатами для швидкої оптимізації зв'язок</span></li>
         <li class="ic"><svg class="ico li-ico" aria-hidden="true"><use href="#i-stack"/></svg><span data-ua="Допомога джунів: делегування рутини, масштабування зв'язок" data-ru="Помощь джунов: делегирование рутины, масштабирование связок" data-en="Junior support: delegating routine, scaling bundles">Допомога джунів: делегування рутини, масштабування зв'язок</span></li>
         <li class="ic"><svg class="ico li-ico" aria-hidden="true"><use href="#i-robot"/></svg><span data-ua="Автоматизація: софт забирає рутину — автоправила, управління бюджетами на десятках акаунтів" data-ru="Автоматизация: софт забирает рутину — автоправила, управление бюджетами на десятках аккаунтов" data-en="Automation: software takes the routine — auto-rules, budget management across dozens of accounts">Автоматизація: софт забирає рутину — автоправила, управління бюджетами на десятках акаунтів</span></li>
-        <li class="ic"><svg class="ico li-ico" aria-hidden="true"><use href="#i-award"/></svg><span data-ua="Тімлід, який ллє більше за мене. Командна робота і актуалізація інформації про те, що зараз працює найкраще" data-ru="Тимлид, который льёт больше меня. Командная работа и актуализация информации о том, что сейчас лучше всего работает" data-en="A team lead who runs more volume than me. Teamwork and constant updates on what performs best right now">Тімлід, який ллє більше за мене. Командна робота і актуалізація інформації про те, що зараз працює найкраще</span></li>
       </ul>
     </div>
   </div>
 </section>
-
 <!-- LANGUAGES -->
 <section class="ai-section">
   <div class="section-header rv">
@@ -859,7 +802,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     <div class="mrow"><div class="mrow-flag"><svg class="ico" aria-hidden="true"><use href="#i-flag-en"/></svg>EN</div><div class="mrow-val">B<span>2</span></div><div class="mrow-lbl">ENGLISH · UPPER INTERMEDIATE</div></div>
   </div>
 </section>
-
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="cta-label" data-ua="Готовий до запуску" data-ru="Готов к запуску" data-en="Ready to launch">Готовий до запуску</div>
@@ -870,13 +812,10 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     <span>@FXSCXI</span><span style="opacity:0.5">→</span>
   </a>
 </section>
-
 <footer>
   <div class="footer-logo">FX / MEDIA BUYER · CRYPTO · iGAMING · FB · IN-APP</div>
   <div class="footer-copy">© 2026 · @FXSCXI</div>
 </footer>
-
-
 <script>
 // ---------- theme (colour) dropdown ----------
 (function(){
@@ -918,7 +857,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     if(e.key==='Escape'&&wrap.classList.contains('open')){close();btn.focus();}
   });
 })();
-
 // ---------- language dropdown ----------
 (function(){
   var LANGS={ua:1,en:1,ru:1};
@@ -973,7 +911,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     if(e.key==='Escape'&&wrap.classList.contains('open')){close();btn.focus();}
   });
 })();
-
 // ---------- scroll progress ----------
 (function(){
   var sl=document.getElementById('scrollLine');
@@ -983,7 +920,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     sl.style.width=(d>0?(h.scrollTop/d)*100:0)+'%';
   },{passive:true});
 })();
-
 // ---------- burger ----------
 (function(){
   var burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
@@ -993,7 +929,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     links[i].addEventListener('click',function(){burger.classList.remove('open');mm.classList.remove('open');});
   }
 })();
-
 // ---------- reveal on scroll ----------
 (function(){
   var obs=new IntersectionObserver(function(es){
@@ -1001,7 +936,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   },{threshold:0.15});
   document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
 })();
-
 // ---------- process track staggered reveal ----------
 (function(){
   var track=document.getElementById('processTrack');
@@ -1016,7 +950,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   },{threshold:0.2});
   p.observe(track);
 })();
-
 // ---------- interactive grid (About) ----------
 (function(){
   var sec=document.getElementById('about');
@@ -1064,7 +997,6 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(build,200);});
   setTimeout(startIdle,2000);
 })();
-
 // ---------- particle sphere ----------
 (function(){
   var canvas=document.getElementById('particleCanvas');if(!canvas)return;
