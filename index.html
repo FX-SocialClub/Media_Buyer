@@ -45,6 +45,7 @@ html[data-theme="white"] .section-label,
 html[data-theme="white"] .stat-num span,
 html[data-theme="white"] .mrow-val span,
 html[data-theme="white"] .ps-tag,
+html[data-theme="white"] .plat-badge,
 html[data-theme="white"] .marquee-item{text-shadow:none;}
 html[data-theme="white"] .sec-ico,
 html[data-theme="white"] .mrow-flag .ico{filter:none;}
@@ -398,6 +399,22 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
 .proj-desc{font-family:'Share Tech Mono',monospace;font-size:13.5px;color:var(--lgrey);line-height:1.75;}
 .proj-stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;}
 @media(max-width:900px){.proj-card{padding:28px 22px;}}
+/* ---- platform split: In-App / Unity vs Facebook ---- */
+.plat-block+.plat-block{margin-top:64px;}
+.plat-head{display:flex;align-items:center;gap:18px;margin-bottom:26px;}
+.plat-badge{display:inline-flex;align-items:center;gap:9px;flex-shrink:0;
+  font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--accent2);background:var(--accent3);
+  padding:9px 14px;border-radius:3px;text-shadow:0 0 6px rgba(var(--accent-rgb),0.21);white-space:nowrap;}
+.plat-badge .ico{width:15px;height:15px;stroke-width:1.7;}
+.plat-rule{flex:1;height:1px;background:var(--border);}
+.plat-note{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--grey);white-space:nowrap;flex-shrink:0;}
+@media(max-width:700px){
+  .plat-head{flex-wrap:wrap;gap:12px;}
+  .plat-rule{display:none;}
+  .plat-block+.plat-block{margin-top:48px;}
+}
 </style>
 </head>
 <body>
@@ -518,6 +535,7 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     <span class="marquee-item"><span class="marquee-dot"></span>Facebook Ads</span>
     <span class="marquee-item"><span class="marquee-dot"></span>iGaming</span>
     <span class="marquee-item"><span class="marquee-dot"></span>In-App</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Unity Ads</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Playable Ads</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Higgsfield AI</span>
     <span class="marquee-item"><span class="marquee-dot"></span>UX/UI Landing</span>
@@ -527,12 +545,13 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     <span class="marquee-item"><span class="marquee-dot"></span>Auto-upload</span>
     <span class="marquee-item"><span class="marquee-dot"></span>CBO 1-5-2</span>
     <span class="marquee-item"><span class="marquee-dot"></span>ABO 1-10-1</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Lookalike</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Ads Library</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>White List</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Source ID</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Unit Economics</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Facebook Ads</span>
     <span class="marquee-item"><span class="marquee-dot"></span>iGaming</span>
     <span class="marquee-item"><span class="marquee-dot"></span>In-App</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Unity Ads</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Playable Ads</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Higgsfield AI</span>
     <span class="marquee-item"><span class="marquee-dot"></span>UX/UI Landing</span>
@@ -542,8 +561,8 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
     <span class="marquee-item"><span class="marquee-dot"></span>Auto-upload</span>
     <span class="marquee-item"><span class="marquee-dot"></span>CBO 1-5-2</span>
     <span class="marquee-item"><span class="marquee-dot"></span>ABO 1-10-1</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Lookalike</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Ads Library</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>White List</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Source ID</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Unit Economics</span>
   </div>
 </div>
@@ -633,32 +652,76 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   <div class="section-header rv">
     <div><div class="section-label" data-ua="Як я працюю" data-ru="Как я работаю" data-en="How I work">Як я працюю</div>
       <h2 class="section-title"><svg class="ico sec-ico" aria-hidden="true"><use href="#i-cycle"/></svg><span data-ua="Підхід" data-ru="Подход" data-en="Approach">Підхід</span></h2></div>
-    <div class="section-count" data-ua="Гіпотеза → Масштаб" data-ru="Гипотеза → Масштаб" data-en="Hypothesis → Scale">Гіпотеза → Масштаб</div>
+    <div class="section-count" data-ua="In-App · Unity + Facebook" data-ru="In-App · Unity + Facebook" data-en="In-App · Unity + Facebook">In-App · Unity + Facebook</div>
   </div>
-  <div class="process-track" id="processTrack">
-    <div class="pstep">
-      <div class="ps-dot"></div><div class="ps-num">01 — RESEARCH</div>
-      <div class="ps-title" data-ua="Дослідження" data-ru="Исследование" data-en="Research">Дослідження</div>
-      <p class="ps-desc" data-ua="Аналіз попиту і болей аудиторії через Google Trends, вивчення поведінкових патернів по GEO, розбір конкурентів у Facebook Ads Library." data-ru="Анализ спроса и болей аудитории через Google Trends, изучение поведенческих паттернов по GEO, разбор конкурентов в Facebook Ads Library." data-en="Demand and pain-point analysis via Google Trends, behavioural patterns per GEO, competitor teardown in Facebook Ads Library.">Аналіз попиту і болей аудиторії через Google Trends, вивчення поведінкових патернів по GEO, розбір конкурентів у Facebook Ads Library.</p>
-      <span class="ps-tag">Trends · Ads Library</span>
+
+  <!-- ===== APPROACH · UNITY (IN-APP) ===== -->
+  <div class="plat-block rv">
+    <div class="plat-head">
+      <span class="plat-badge"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-ua="Підхід · Unity" data-ru="Подход · Unity" data-en="Approach · Unity">Підхід · Unity</span></span>
+      <span class="plat-rule"></span>
+      <span class="plat-note" data-ua="In-App · 04 етапи" data-ru="In-App · 04 этапа" data-en="In-App · 04 stages">In-App · 04 етапи</span>
     </div>
-    <div class="pstep">
-      <div class="ps-dot"></div><div class="ps-num">02 — TEST</div>
-      <div class="ps-title" data-ua="Тестування" data-ru="Тестирование" data-en="Testing">Тестування</div>
-      <p class="ps-desc" data-ua="Структура ABO 1–10–1. Перевірка гіпотез по зв'язках Creative / Audience / Landing. Валідація оффера через локальні форуми і спільноти." data-ru="Структура ABO 1–10–1. Проверка гипотез по связкам Creative / Audience / Landing. Валидация оффера через локальные форумы и сообщества." data-en="ABO 1–10–1 structure. Testing Creative / Audience / Landing hypotheses. Offer validation through local forums and communities.">Структура ABO 1–10–1. Перевірка гіпотез по зв'язках Creative / Audience / Landing. Валідація оффера через локальні форуми і спільноти.</p>
-      <span class="ps-tag">ABO 1–10–1</span>
+    <div class="process-track">
+      <div class="pstep">
+        <div class="ps-dot"></div><div class="ps-num">01 — RESEARCH</div>
+        <div class="ps-title" data-ua="Дослідження" data-ru="Исследование" data-en="Research">Дослідження</div>
+        <p class="ps-desc" data-ua="Аналіз вертикалі та конкурентів через AppMagic / Sensor Tower. Розбір креативів топових пріл у Unity Creative Library. Оцінка ємності GEO і рівня CPI за бенчмарками." data-ru="Анализ вертикали и конкурентов через AppMagic / Sensor Tower. Разбор креативов топовых прил в Unity Creative Library. Оценка ёмкости GEO и уровня CPI по бенчмаркам." data-en="Vertical and competitor analysis via AppMagic / Sensor Tower. Creative teardown of top apps in the Unity Creative Library. GEO capacity and CPI benchmarks.">Аналіз вертикалі та конкурентів через AppMagic / Sensor Tower. Розбір креативів топових пріл у Unity Creative Library. Оцінка ємності GEO і рівня CPI за бенчмарками.</p>
+        <span class="ps-tag">AppMagic · Creative Lib</span>
+      </div>
+      <div class="pstep">
+        <div class="ps-dot"></div><div class="ps-num">02 — TEST</div>
+        <div class="ps-title" data-ua="Тестування" data-ru="Тестирование" data-en="Testing">Тестування</div>
+        <p class="ps-desc" data-ua="Запуск кампаній по GEO-тірах з роздільними бідами. Тест 5–8 креативів: video 15–30s + playable. Одна ціль на кампанію, без змішування івентів." data-ru="Запуск кампаний по GEO-тирам с раздельными бидами. Тест 5–8 креативов: video 15–30s + playable. Одна цель на кампанию, без смешивания ивентов." data-en="Campaigns split by GEO tier with separate bids. Testing 5–8 creatives: 15–30s video + playable. One goal per campaign, no mixed events.">Запуск кампаній по GEO-тірах з роздільними бідами. Тест 5–8 креативів: video 15–30s + playable. Одна ціль на кампанію, без змішування івентів.</p>
+        <span class="ps-tag">Video + Playable</span>
+      </div>
+      <div class="pstep">
+        <div class="ps-dot"></div><div class="ps-num">03 — VALIDATE</div>
+        <div class="ps-title" data-ua="Валідація" data-ru="Валидация" data-en="Validation">Валідація</div>
+        <p class="ps-desc" data-ua="Оцінка на рівні source ID: зв'язка «крео × пріла-джерело». Відсів за D1 retention, D7 ROAS і якістю інсталів. Формування white list робочих джерел." data-ru="Оценка на уровне source ID: связка «крео × прила-источник». Отсев по D1 retention, D7 ROAS и качеству инсталлов. Формирование white list рабочих источников." data-en="Evaluation at source ID level: the creative × source-app bundle. Filtering by D1 retention, D7 ROAS and install quality. Building a white list of working sources.">Оцінка на рівні source ID: зв'язка «крео × пріла-джерело». Відсів за D1 retention, D7 ROAS і якістю інсталів. Формування white list робочих джерел.</p>
+        <span class="ps-tag">Source ID · D7 ROAS</span>
+      </div>
+      <div class="pstep">
+        <div class="ps-dot"></div><div class="ps-num">04 — SCALE</div>
+        <div class="ps-title" data-ua="Масштабування" data-ru="Масштабирование" data-en="Scaling">Масштабування</div>
+        <p class="ps-desc" data-ua="Масштабування по white list і підтверджених зв'язках. Чіткий поділ тесту й масштабу на рівні окремих кампаній." data-ru="Масштабирование по white list и подтверждённым связкам. Чёткое разделение теста и масштаба на уровне отдельных кампаний." data-en="Scaling on the white list and confirmed bundles. Test and scale kept in separate campaigns.">Масштабування по white list і підтверджених зв'язках. Чіткий поділ тесту й масштабу на рівні окремих кампаній.</p>
+        <span class="ps-tag">White list scale</span>
+      </div>
     </div>
-    <div class="pstep">
-      <div class="ps-dot"></div><div class="ps-num">03 — VALIDATE</div>
-      <div class="ps-title" data-ua="Валідація" data-ru="Валидация" data-en="Validation">Валідація</div>
-      <p class="ps-desc" data-ua="Відбір робочих зв'язок за KPI та юніт-економікою. Формування Winners Set — пулу перевірених креативів і аудиторій." data-ru="Отбор рабочих связок по KPI и юнит-экономике. Формирование Winners Set — пула проверенных креативов и аудиторий." data-en="Selecting working bundles by KPI and unit economics. Building a Winners Set — a pool of proven creatives and audiences.">Відбір робочих зв'язок за KPI та юніт-економікою. Формування Winners Set — пулу перевірених креативів і аудиторій.</p>
-      <span class="ps-tag">Winners Set</span>
+  </div>
+
+  <!-- ===== APPROACH · FACEBOOK ===== -->
+  <div class="plat-block rv">
+    <div class="plat-head">
+      <span class="plat-badge"><svg class="ico" aria-hidden="true"><use href="#i-signal"/></svg><span data-ua="Підхід · FB" data-ru="Подход · FB" data-en="Approach · FB">Підхід · FB</span></span>
+      <span class="plat-rule"></span>
+      <span class="plat-note" data-ua="Facebook Ads · 04 етапи" data-ru="Facebook Ads · 04 этапа" data-en="Facebook Ads · 04 stages">Facebook Ads · 04 етапи</span>
     </div>
-    <div class="pstep">
-      <div class="ps-dot"></div><div class="ps-num">04 — SCALE</div>
-      <div class="ps-title" data-ua="Масштабування" data-ru="Масштабирование" data-en="Scaling">Масштабування</div>
-      <p class="ps-desc" data-ua="CBO 1–5–2 на підтверджених зв'язках. Масштабується зв'язка, а не окремий креатив. Чіткий поділ тесту і масштабу." data-ru="CBO 1–5–2 на подтверждённых связках. Масштабируется связка, а не отдельный креатив. Чёткое разделение теста и масштаба." data-en="CBO 1–5–2 on confirmed bundles. The bundle scales, not a single creative. Clear separation of test and scale.">CBO 1–5–2 на підтверджених зв'язках. Масштабується зв'язка, а не окремий креатив. Чіткий поділ тесту і масштабу.</p>
-      <span class="ps-tag">CBO 1–5–2</span>
+    <div class="process-track" id="processTrack">
+      <div class="pstep">
+        <div class="ps-dot"></div><div class="ps-num">01 — RESEARCH</div>
+        <div class="ps-title" data-ua="Дослідження" data-ru="Исследование" data-en="Research">Дослідження</div>
+        <p class="ps-desc" data-ua="Аналіз попиту і болей аудиторії через Google Trends, вивчення поведінкових патернів по GEO, розбір конкурентів у Facebook Ads Library." data-ru="Анализ спроса и болей аудитории через Google Trends, изучение поведенческих паттернов по GEO, разбор конкурентов в Facebook Ads Library." data-en="Demand and pain-point analysis via Google Trends, behavioural patterns per GEO, competitor teardown in Facebook Ads Library.">Аналіз попиту і болей аудиторії через Google Trends, вивчення поведінкових патернів по GEO, розбір конкурентів у Facebook Ads Library.</p>
+        <span class="ps-tag">Trends · Ads Library</span>
+      </div>
+      <div class="pstep">
+        <div class="ps-dot"></div><div class="ps-num">02 — TEST</div>
+        <div class="ps-title" data-ua="Тестування" data-ru="Тестирование" data-en="Testing">Тестування</div>
+        <p class="ps-desc" data-ua="Структура ABO 1–10–1. Перевірка гіпотез по зв'язках Creative / Audience / Landing. Валідація оффера через локальні форуми і спільноти." data-ru="Структура ABO 1–10–1. Проверка гипотез по связкам Creative / Audience / Landing. Валидация оффера через локальные форумы и сообщества." data-en="ABO 1–10–1 structure. Testing Creative / Audience / Landing hypotheses. Offer validation through local forums and communities.">Структура ABO 1–10–1. Перевірка гіпотез по зв'язках Creative / Audience / Landing. Валідація оффера через локальні форуми і спільноти.</p>
+        <span class="ps-tag">ABO 1–10–1</span>
+      </div>
+      <div class="pstep">
+        <div class="ps-dot"></div><div class="ps-num">03 — VALIDATE</div>
+        <div class="ps-title" data-ua="Валідація" data-ru="Валидация" data-en="Validation">Валідація</div>
+        <p class="ps-desc" data-ua="Відбір робочих зв'язок за KPI та юніт-економікою. Формування Winners Set — пулу перевірених креативів і аудиторій." data-ru="Отбор рабочих связок по KPI и юнит-экономике. Формирование Winners Set — пула проверенных креативов и аудиторий." data-en="Selecting working bundles by KPI and unit economics. Building a Winners Set — a pool of proven creatives and audiences.">Відбір робочих зв'язок за KPI та юніт-економікою. Формування Winners Set — пулу перевірених креативів і аудиторій.</p>
+        <span class="ps-tag">Winners Set</span>
+      </div>
+      <div class="pstep">
+        <div class="ps-dot"></div><div class="ps-num">04 — SCALE</div>
+        <div class="ps-title" data-ua="Масштабування" data-ru="Масштабирование" data-en="Scaling">Масштабування</div>
+        <p class="ps-desc" data-ua="CBO 1–5–2 на підтверджених зв'язках. Масштабується зв'язка, а не окремий креатив. Чіткий поділ тесту і масштабу." data-ru="CBO 1–5–2 на подтверждённых связках. Масштабируется связка, а не отдельный креатив. Чёткое разделение теста и масштаба." data-en="CBO 1–5–2 on confirmed bundles. The bundle scales, not a single creative. Clear separation of test and scale.">CBO 1–5–2 на підтверджених зв'язках. Масштабується зв'язка, а не окремий креатив. Чіткий поділ тесту і масштабу.</p>
+        <span class="ps-tag">CBO 1–5–2</span>
+      </div>
     </div>
   </div>
 </section>
@@ -667,21 +730,53 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   <div class="section-header rv">
     <div><div class="section-label" data-ua="Як я масштабую" data-ru="Как я масштабирую" data-en="How I scale">Як я масштабую</div>
       <h2 class="section-title"><svg class="ico sec-ico" aria-hidden="true"><use href="#i-trend"/></svg><span data-ua="Масштабування" data-ru="Масштабирование" data-en="Scaling">Масштабування</span></h2></div>
-    <div class="section-count" data-ua="03 — вектори" data-ru="03 — вектора" data-en="03 — vectors">03 — вектори</div>
+    <div class="section-count" data-ua="In-App · Unity + Facebook" data-ru="In-App · Unity + Facebook" data-en="In-App · Unity + Facebook">In-App · Unity + Facebook</div>
   </div>
-  <div class="services-grid">
-    <div class="service-card rv"><div class="service-num" data-ua="01 · ГОРИЗОНТАЛЬ" data-ru="01 · ГОРИЗОНТАЛЬ" data-en="01 · HORIZONTAL">01 · ГОРИЗОНТАЛЬ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-scale-h"/></svg></div>
-      <div class="service-name" data-ua="Горизонтальне" data-ru="Горизонтальное" data-en="Horizontal">Горизонтальне</div>
-      <p class="service-desc" data-ua="Дублювання робочих кампаній і адсетів. Запуск на нових акаунтах і Fan Pages. Масштабування через бюджети та аудиторії." data-ru="Дублирование рабочих кампаний и адсетов. Запуск на новых аккаунтах и Fan Pages. Масштабирование через бюджеты и аудитории." data-en="Duplicating working campaigns and ad sets. Launching on new accounts and Fan Pages. Scaling through budgets and audiences.">Дублювання робочих кампаній і адсетів. Запуск на нових акаунтах і Fan Pages. Масштабування через бюджети та аудиторії.</p>
-      <div class="service-tags"><span class="svc-tag">Duplicate</span><span class="svc-tag">New accs</span><span class="svc-tag">Fan Pages</span></div></div>
-    <div class="service-card rv d1"><div class="service-num" data-ua="02 · ВЕРТИКАЛЬ" data-ru="02 · ВЕРТИКАЛЬ" data-en="02 · VERTICAL">02 · ВЕРТИКАЛЬ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg></div>
-      <div class="service-name" data-ua="Вертикальне" data-ru="Вертикальное" data-en="Vertical">Вертикальне</div>
-      <p class="service-desc" data-ua="Поступове зростання бюджету +20–30% кожні 24 години. Акуратний тиск на робочу зв'язку без втрати якості трафіку." data-ru="Постепенный рост бюджета +20–30% каждые 24 часа. Аккуратное давление на рабочую связку без потери качества трафика." data-en="Gradual budget growth of +20–30% every 24 hours. Careful pressure on a working bundle without losing traffic quality.">Поступове зростання бюджету +20–30% кожні 24 години. Акуратний тиск на робочу зв'язку без втрати якості трафіку.</p>
-      <div class="service-tags"><span class="svc-tag">+20-30%</span><span class="svc-tag">24h step</span></div></div>
-    <div class="service-card rv d2"><div class="service-num" data-ua="03 · АУДИТОРІЇ" data-ru="03 · АУДИТОРИИ" data-en="03 · AUDIENCES">03 · АУДИТОРІЇ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></div>
-      <div class="service-name" data-ua="За аудиторіями" data-ru="По аудиториям" data-en="By audiences">За аудиторіями</div>
-      <p class="service-desc" data-ua="Розширення ЦА: вузькі інтереси → Broad. Lookalike 1% → 3–5%. Пошук свіжих пулів усередині робочої зв'язки." data-ru="Расширение ЦА: узкие интересы → Broad. Lookalike 1% → 3–5%. Поиск свежих пулов внутри рабочей связки." data-en="Audience expansion: narrow interests → Broad. Lookalike 1% → 3–5%. Finding fresh pools inside a working bundle.">Розширення ЦА: вузькі інтереси → Broad. Lookalike 1% → 3–5%. Пошук свіжих пулів усередині робочої зв'язки.</p>
-      <div class="service-tags"><span class="svc-tag">Broad</span><span class="svc-tag">LAL 1-5%</span><span class="svc-tag">Interests</span></div></div>
+
+  <!-- ===== SCALING · UNITY (IN-APP) ===== -->
+  <div class="plat-block">
+    <div class="plat-head rv">
+      <span class="plat-badge"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-ua="Масштабування · Unity" data-ru="Масштабирование · Unity" data-en="Scaling · Unity">Масштабування · Unity</span></span>
+      <span class="plat-rule"></span>
+      <span class="plat-note" data-ua="In-App · 03 вектори" data-ru="In-App · 03 вектора" data-en="In-App · 03 vectors">In-App · 03 вектори</span>
+    </div>
+    <div class="services-grid">
+      <div class="service-card rv"><div class="service-num" data-ua="01 · ГОРИЗОНТАЛЬ" data-ru="01 · ГОРИЗОНТАЛЬ" data-en="01 · HORIZONTAL">01 · ГОРИЗОНТАЛЬ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></div>
+        <div class="service-name" data-ua="Горизонтальне" data-ru="Горизонтальное" data-en="Horizontal">Горизонтальне</div>
+        <p class="service-desc" data-ua="Розширення по GEO. Нові пріли зі збереженням релевантності зв'язки: крео — пріла — продукт. Постійна ротація креативів усередині робочих джерел." data-ru="Расширение по GEO. Новые прилы с сохранением релевантности связки: крео — прила — продукт. Постоянная ротация креативов внутри рабочих источников." data-en="GEO expansion. New apps while keeping the bundle relevant: creative — app — product. Constant creative rotation inside working sources.">Розширення по GEO. Нові пріли зі збереженням релевантності зв'язки: крео — пріла — продукт. Постійна ротація креативів усередині робочих джерел.</p>
+        <div class="service-tags"><span class="svc-tag">GEO</span><span class="svc-tag">New apps</span><span class="svc-tag">Creative rot.</span></div></div>
+      <div class="service-card rv d1"><div class="service-num" data-ua="02 · ВЕРТИКАЛЬ" data-ru="02 · ВЕРТИКАЛЬ" data-en="02 · VERTICAL">02 · ВЕРТИКАЛЬ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg></div>
+        <div class="service-name" data-ua="Вертикальне" data-ru="Вертикальное" data-en="Vertical">Вертикальне</div>
+        <p class="service-desc" data-ua="Збільшення бюджету на 20% кожні 1–2 дні, якщо це не впливає на показники. Split-test Bid / CPE по івентах (rega / dep). На white list ставимо Bid на Event ×2, щоб викупити топовий трафік." data-ru="Увеличение бюджета на 20% каждые 1–2 дня, если это не влияет на показатели. Split-test Bid / CPE по ивентам (rega / dep). На white list ставим Bid на Event ×2, чтобы выкупить топовый трафик." data-en="Budget increases of 20% every 1–2 days as long as metrics hold. Bid / CPE split tests on events (rega / dep). On the white list we set Bid on Event ×2 to buy out top traffic.">Збільшення бюджету на 20% кожні 1–2 дні, якщо це не впливає на показники. Split-test Bid / CPE по івентах (rega / dep). На white list ставимо Bid на Event ×2, щоб викупити топовий трафік.</p>
+        <div class="service-tags"><span class="svc-tag">+20% / 1-2d</span><span class="svc-tag">Bid / CPE</span><span class="svc-tag">Event ×2</span></div></div>
+      <div class="service-card rv d2"><div class="service-num" data-ua="03 · ДЖЕРЕЛА" data-ru="03 · ИСТОЧНИКИ" data-en="03 · SOURCES">03 · ДЖЕРЕЛА</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-signal"/></svg></div>
+        <div class="service-name" data-ua="За джерелами" data-ru="По источникам" data-en="By sources">За джерелами</div>
+        <p class="service-desc" data-ua="Окремі кампанії з white list-джерел із підтвердженим ROAS від 20–25%. Розширення пулу за рахунок сусідніх пріл тієї ж категорії, відключення джерел із низьким retention." data-ru="Отдельные кампании из white list-источников с подтверждённым ROAS от 20–25%. Расширение пула за счёт соседних прил той же категории, отключение источников с низким retention." data-en="Separate campaigns built from white-list sources with a confirmed ROAS of 20–25%+. Expanding the pool with neighbouring apps in the same category, cutting sources with weak retention.">Окремі кампанії з white list-джерел із підтвердженим ROAS від 20–25%. Розширення пулу за рахунок сусідніх пріл тієї ж категорії, відключення джерел із низьким retention.</p>
+        <div class="service-tags"><span class="svc-tag">White list</span><span class="svc-tag">ROAS 20-25%</span><span class="svc-tag">Source ID</span></div></div>
+    </div>
+  </div>
+
+  <!-- ===== SCALING · FACEBOOK ===== -->
+  <div class="plat-block">
+    <div class="plat-head rv">
+      <span class="plat-badge"><svg class="ico" aria-hidden="true"><use href="#i-signal"/></svg><span data-ua="Масштабування · FB" data-ru="Масштабирование · FB" data-en="Scaling · FB">Масштабування · FB</span></span>
+      <span class="plat-rule"></span>
+      <span class="plat-note" data-ua="Facebook Ads · 03 вектори" data-ru="Facebook Ads · 03 вектора" data-en="Facebook Ads · 03 vectors">Facebook Ads · 03 вектори</span>
+    </div>
+    <div class="services-grid">
+      <div class="service-card rv"><div class="service-num" data-ua="01 · ГОРИЗОНТАЛЬ" data-ru="01 · ГОРИЗОНТАЛЬ" data-en="01 · HORIZONTAL">01 · ГОРИЗОНТАЛЬ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-scale-h"/></svg></div>
+        <div class="service-name" data-ua="Горизонтальне" data-ru="Горизонтальное" data-en="Horizontal">Горизонтальне</div>
+        <p class="service-desc" data-ua="Дублювання робочих кампаній і адсетів. Запуск на нових акаунтах і Fan Pages. Масштабування через бюджети та аудиторії." data-ru="Дублирование рабочих кампаний и адсетов. Запуск на новых аккаунтах и Fan Pages. Масштабирование через бюджеты и аудитории." data-en="Duplicating working campaigns and ad sets. Launching on new accounts and Fan Pages. Scaling through budgets and audiences.">Дублювання робочих кампаній і адсетів. Запуск на нових акаунтах і Fan Pages. Масштабування через бюджети та аудиторії.</p>
+        <div class="service-tags"><span class="svc-tag">Duplicate</span><span class="svc-tag">New accs</span><span class="svc-tag">Fan Pages</span></div></div>
+      <div class="service-card rv d1"><div class="service-num" data-ua="02 · ВЕРТИКАЛЬ" data-ru="02 · ВЕРТИКАЛЬ" data-en="02 · VERTICAL">02 · ВЕРТИКАЛЬ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg></div>
+        <div class="service-name" data-ua="Вертикальне" data-ru="Вертикальное" data-en="Vertical">Вертикальне</div>
+        <p class="service-desc" data-ua="Поступове зростання бюджету +20–30% кожні 24 години. Акуратний тиск на робочу зв'язку без втрати якості трафіку." data-ru="Постепенный рост бюджета +20–30% каждые 24 часа. Аккуратное давление на рабочую связку без потери качества трафика." data-en="Gradual budget growth of +20–30% every 24 hours. Careful pressure on a working bundle without losing traffic quality.">Поступове зростання бюджету +20–30% кожні 24 години. Акуратний тиск на робочу зв'язку без втрати якості трафіку.</p>
+        <div class="service-tags"><span class="svc-tag">+20-30%</span><span class="svc-tag">24h step</span></div></div>
+      <div class="service-card rv d2"><div class="service-num" data-ua="03 · АУДИТОРІЇ" data-ru="03 · АУДИТОРИИ" data-en="03 · AUDIENCES">03 · АУДИТОРІЇ</div><div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></div>
+        <div class="service-name" data-ua="За аудиторіями" data-ru="По аудиториям" data-en="By audiences">За аудиторіями</div>
+        <p class="service-desc" data-ua="Розширення ЦА: вузькі інтереси → Broad. Lookalike 1% → 3–5%. Пошук свіжих пулів усередині робочої зв'язки." data-ru="Расширение ЦА: узкие интересы → Broad. Lookalike 1% → 3–5%. Поиск свежих пулов внутри рабочей связки." data-en="Audience expansion: narrow interests → Broad. Lookalike 1% → 3–5%. Finding fresh pools inside a working bundle.">Розширення ЦА: вузькі інтереси → Broad. Lookalike 1% → 3–5%. Пошук свіжих пулів усередині робочої зв'язки.</p>
+        <div class="service-tags"><span class="svc-tag">Broad</span><span class="svc-tag">LAL 1-5%</span><span class="svc-tag">Interests</span></div></div>
+    </div>
   </div>
 </section>
 <!-- AUTOMATION & AI -->
@@ -863,9 +958,9 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   var HTMLLANG={ua:'uk',en:'en',ru:'ru'};
   var LABEL={ua:'UA',en:'ENG',ru:'RU'};
   var TITLES={
-    ua:'Media Buyer \u2014 Crypto / iGaming / Facebook Ads / In-App \u2014 @FXSCXI',
-    en:'Media Buyer \u2014 Crypto / iGaming / Facebook Ads / In-App \u2014 @FXSCXI',
-    ru:'Media Buyer \u2014 Crypto / iGaming / Facebook Ads / In-App \u2014 @FXSCXI'
+    ua:'Media Buyer — Crypto / iGaming / Facebook Ads / In-App — @FXSCXI',
+    en:'Media Buyer — Crypto / iGaming / Facebook Ads / In-App — @FXSCXI',
+    ru:'Media Buyer — Crypto / iGaming / Facebook Ads / In-App — @FXSCXI'
   };
   var nodes=document.querySelectorAll('[data-ua]');
   var wrap=document.getElementById('langSelect');
@@ -936,19 +1031,19 @@ footer{position:relative;z-index:1;padding:32px 48px;border-top:1px solid var(--
   },{threshold:0.15});
   document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
 })();
-// ---------- process track staggered reveal ----------
+// ---------- process tracks staggered reveal (Unity + FB) ----------
 (function(){
-  var track=document.getElementById('processTrack');
-  if(!track)return;
+  var tracks=document.querySelectorAll('.process-track');
+  if(!tracks.length)return;
   var p=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(e.isIntersecting){
-        track.querySelectorAll('.pstep').forEach(function(s,i){setTimeout(function(){s.classList.add('visible');},i*130);});
-        p.disconnect();
+        e.target.querySelectorAll('.pstep').forEach(function(s,i){setTimeout(function(){s.classList.add('visible');},i*130);});
+        p.unobserve(e.target);
       }
     });
   },{threshold:0.2});
-  p.observe(track);
+  Array.prototype.forEach.call(tracks,function(t){p.observe(t);});
 })();
 // ---------- interactive grid (About) ----------
 (function(){
